@@ -1,9 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_sale_line_properties_wiz,access_sale_line_properties_wiz,model_sale_line_properties_wiz,,1,1,1,1
-access_sale_order_line_public,access_sale_order_line_public,sale.model_sale_order_line,,1,0,0,0
-access_cpq_product_info,access_cpq_product_info,model_cpq_product_info,,1,1,1,1
-access_product_variant_line,access_product_variant_line,model_product_variant_line,,1,1,1,1
-access_cpq_product_section_line,access_cpq_product_section_line,model_cpq_product_section_line,,1,1,1,1
-access_cpq_create_quotation,access_cpq_create_quotation,model_cpq_create_quotation,,1,1,1,1
-access_cpq_create_quotation_lines,access_cpq_create_quotation_lines,model_cpq_create_quotation_lines,,1,1,1,1
-access_mrp_workorder_wizard,access_mrp_workorder_wizard,model_mrp_workorder_wizard,,1,1,1,1

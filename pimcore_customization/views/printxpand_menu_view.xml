@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<odoo>
-    <menuitem id="menu_printxpand_configuration_artwork" name="Artwork configuration" parent="sale.menu_sale_config" sequence="65"/>
-    <menuitem id="sub_menu_settings" name="Artwork order Settings" parent="pimcore_customization.menu_printxpand_configuration_artwork" action="action_printxpand_config_settings" sequence="5"/>
-</odoo>

@@ -1,9 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_printing_selection_line,access_printing_selection_line,model_printing_selection_line,base.group_user,1,1,1,1
-access_raw_product_variant_line,access_raw_product_variant_line,model_raw_product_variant_line,base.group_user,1,1,1,1
-access_setup_charges_product_line,access_setup_charges_product_line,model_setup_charges_product_line,base.group_user,1,1,1,1
-access_printing_locations,access_printing_locations,model_printing_locations,base.group_user,1,1,1,1
-access_printing_methods,access_printing_methods,model_printing_methods,base.group_user,1,1,1,1
-access_printing_colors_and_sizes,access_printing_colors_and_sizes,model_printing_colors_and_sizes,base.group_user,1,1,1,1
-access_shipping_products,access_shipping_products,model_shipping_products,base.group_user,1,1,1,1
-access_printing_qty_price,access_printing_qty_price,model_printing_qty_price,base.group_user,1,1,1,1
