@@ -166,5 +166,17 @@
             </field>
         </record>
 
+        <record id="view_supplierinfo_tree_inherit_string" model="ir.ui.view">
+            <field name="name">supplierinfo.tree.inherit.string</field>
+            <field name="model">product.supplierinfo</field>
+            <field name="inherit_id" ref="product.product_supplierinfo_tree_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='price']" position="attributes">
+                    <attribute name="string">Cost</attribute>
+                </xpath>
+
+            </field>
+        </record>
+
     </data>
 </odoo>

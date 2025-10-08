@@ -124,32 +124,22 @@ patch (ProductConfiguratorDialog.prototype, {
                 p => p.product_tmpl_id !== this.env.mainProductTmplId
             ),
         );
-        this.orm.call("product.template", "get_data_val_config", [defaultProductTmplId],{})
-        .then((data) => {
-            if (data){
-                this.props.close();
-                this.actionService.doAction({
-                    type: 'ir.actions.act_window',
-                    name: 'Printing Products',
-                    res_model: 'sale.line.properties.wiz',
-                    views: [[false, 'form']],
-                    view_type: 'form',
-                    target: 'new',
-                    context: {
-                        active_id: this.props.record.evalContext.id,
-                        product_id_from_js: variantIds,
-                        product_quantities: variantQuantities,
-                        default_product_tmpl_id: defaultProductTmplId,
-                        related_printing_product_ids: data.related_printing_product_ids,
-                        related_delivery_product_ids:data.related_delivery_product_ids,
-                        showCpq: this.show_cpq,
-                    },
-                });
-            }
-        })
-        .catch((error) => {
-            console.error("Error calling ORM method:", error);
-        });
+        this.props.close();
+        this.actionService.doAction({
+        type: 'ir.actions.act_window',
+        name: 'Printing Products',
+        res_model: 'sale.line.properties.wiz',
+        views: [[false, 'form']],
+        view_type: 'form',
+        target: 'new',
+        context: {
+            active_id: this.props.record.evalContext.id,
+            product_id_from_js: variantIds,
+            product_quantities: variantQuantities,
+            default_product_tmpl_id: defaultProductTmplId,
+            showCpq: this.show_cpq,
+        },
+    });
     }
     },
 )

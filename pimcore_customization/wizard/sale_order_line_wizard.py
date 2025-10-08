@@ -9,10 +9,11 @@ class SaleLinePropertiesWiz(models.TransientModel):
     _description = 'Line Properties Wizard'
 
     name = fields.Char(string="Wizard")
-    service_product_ids = fields.Many2many('product.product','service_product_rel','service_id','product_id',string="Printing Products", domain=[("product_service_type", '=', 'printing')])
-    delivery_product_ids = fields.Many2many('product.product','delivery_product_rel','delivery_id','product_id',string="Delivery Products",domain=[("product_service_type", '=', 'delivery')])
+    service_product_ids = fields.Many2many('product.product','service_product_rel','service_id','product_id',string="Printing Products", domain=[("product_service_type", '=', 'printing'), ("supplier_id", '=', False)])
+    delivery_product_ids = fields.Many2many('product.product','delivery_product_rel','delivery_id','product_id',string="Delivery Products",domain=[("product_service_type", '=', 'delivery'), ("supplier_id", '=', False)])
+    extra_charge_product_ids = fields.Many2many('product.product','extra_charge_product_rel','extra_charge_id','product_id',string="Extra Charges Products",domain=[("product_service_type", '=', 'extra_charges'), ("supplier_id", '=', False)])
     sale_order_id = fields.Many2one('sale.order', string="Sale Order")
-    step = fields.Selection([('service', 'Service Products'), ('delivery', 'Delivery Products')],string="Step",default='service')
+    step = fields.Selection([('service', 'Service Products'), ('delivery', 'Delivery Products'),('extra_charges','Extra Charges')],string="Step",default='service')
     product_template_id = fields.Many2one('product.template',string="Product Template")
 
     @api.model
@@ -27,8 +28,6 @@ class SaleLinePropertiesWiz(models.TransientModel):
         product_template_id = self.env.context.get('default_product_tmpl_id')
         if product_template_id:
             res['product_template_id'] = product_template_id
-
-        # Clear `printing_thumbnail` for service and delivery products
         return res
 
     def action_next_step(self):
@@ -36,7 +35,9 @@ class SaleLinePropertiesWiz(models.TransientModel):
         if self.step == 'service':
             self.step = 'delivery'
         elif self.step == 'delivery':
-            self.step = 'confirm'
+            self.step = 'extra_charges'
+        elif self.step == 'extra_charges':
+            self.step == 'confirm'
         return {
             'type': 'ir.actions.act_window',
             'name': _('Sale Line Properties Wizard'),
@@ -50,7 +51,7 @@ class SaleLinePropertiesWiz(models.TransientModel):
         sale_order = self.sale_order_id
 
         if not sale_order.exists():
-             raise UserError('No valid Sale Order found in the context.')
+            raise UserError('No valid Sale Order found in the context.')
 
         show_cpq = self.env.context.get('showCpq')
         product_ids = self.env['product.product'].browse(self.env.context.get('product_id_from_js'))
@@ -71,7 +72,7 @@ class SaleLinePropertiesWiz(models.TransientModel):
             'product_id': selected_product.id,
             'product_template_id':  self.product_template_id.id,
             'product_uom_qty': 1,
-            'price_unit': 0,
+            # 'price_unit': 0,
             'sequence': max_sequence + 1,
             'show_cpq':True
         }
@@ -85,17 +86,18 @@ class SaleLinePropertiesWiz(models.TransientModel):
                 values = configurator.action_config_done()
                 new_lines.append((0,0,values))
 
-        products_to_process = product_ids | self.service_product_ids | self.delivery_product_ids
+        products_to_process = product_ids | self.service_product_ids | self.delivery_product_ids | self.extra_charge_product_ids
         for product in products_to_process:
-            price_unit = None
-            for quantity in product_quantities.values():
-                price = self.get_product_price(product, quantity, sale_order.date_order)
-                price_unit = price
+            # price_unit = None
+            # for quantity in product_quantities.values():
+            #     price = self.get_product_price(product, quantity, sale_order.date_order)
+            #     price_unit = price
             max_sequence += 1
             new_lines.append((0, 0, {
                 'product_id': product.id,
                 'name': product.display_name,
                 'product_uom_qty': product_quantities.get(str(product.id), 1),
+                # 'price_unit': price_unit if price_unit else product.list_price,
                 'sequence': max_sequence,
                 'printing_thumbnail' : product.printing_thumbnail,
                 'printing_thumbnail_name' : product.printing_thumbnail_name,

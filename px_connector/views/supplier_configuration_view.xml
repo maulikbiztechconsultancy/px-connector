@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="view_px_supplier_configuration_form" model="ir.ui.view">
+        <field name="name">supplier.configuration.form</field>
+        <field name="model">supplier.configuration</field>
+        <field name="arch" type="xml">
+            <form string="Suppliers">
+                <header>
+                    <!-- allow --> 
+                    <button name="get_suppiler_category" string="Get Category" type="object" class="oe_highlight oe_button" style="font-size:16px; padding:8px 24px;" data-hotkey="m"/>
+                    <button name="fetch_suppiler_product" string="Fetch Product" type="object" class="oe_highlight oe_button" style="font-size:16px; padding:8px 24px;" data-hotkey="p"/>
+                </header>
+                <sheet>
+                    <h1>
+                        <field name="name" class="oe_inline"/>
+                    </h1>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="vendor_short_code"/>
+                            <field name="active"/>
+                            <field name="shipping_product"/>
+                            <field name="printing_product"/>
+                        </group>
+                        <group>
+                            <field name="authorization_id"/>
+                            <field name="currency_id"/>
+                            <field name="converted_currency_id"/>
+                            <field name="get_endpoint"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="General Info" name="general_info">
+                            <group>
+                                <group string="Product Setup" name="product_setup">
+                                    <field name="update_product"/>
+                                    <field name="create_pricelist"/>
+                                    <field name="pricelist_margin"/>
+                                    <field name="extra_margin"/>
+                                    <field name="partner_id"/>
+                                    <field name="central_system_date"/>
+                                    <field name="last_synced_date"/>
+                                </group>
+                                <group string="Order Setup" name="order_setup">
+                                    <field name="printing_product_id"/>
+                                    <field name="shpping_product_id"/>
+                                    <field name="setup_product_id"/>
+                                    <separator string="Pagination &amp; Language"/>
+                                    <field name="language_id"/>
+                                    <field name="page"/>
+                                    <field name="page_size"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Product Configuration" name="product_configuration">
+                            <group>
+                                <group>
+                                    <field name="product_query_text"/>
+                                </group>
+                                <group>
+                                    <field name="category_query_text"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Category Configuration">
+                            <field name="category_relation_ids" editable="bottom">
+                                <list >
+                                    <field name="odoo_caegory_id"/>
+                                    <field name="supplier_category_id"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Attribute Options">
+                            <field name="attribute_mapping_ids">
+                                <list >
+                                    <field name="name"/>
+                                    <field name="attribute_id"/>
+                                    <button name="get_options_supplier" string="Get Options" type="object" clase="btn-primary"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_px_supplier_configuration_tree" model="ir.ui.view">
+        <field name="name">supplier.configuration.tree</field>
+        <field name="model">supplier.configuration</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_px_supplier_configuration_search" model="ir.ui.view">
+        <field name="name">supplier.configuration.search</field>
+        <field name="model">supplier.configuration</field>
+        <field name="arch" type="xml">
+            <search string="Suppliers">
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_px_supplier_configuration" model="ir.actions.act_window">
+        <field name="name">Suppliers</field>
+        <field name="res_model">supplier.configuration</field>
+        <field name="view_mode">list,form,pivot,graph</field>
+        <field name="view_id" ref="view_px_supplier_configuration_tree"/>
+        <field name="search_view_id" ref="view_px_supplier_configuration_search"/>
+    </record>
+</odoo>

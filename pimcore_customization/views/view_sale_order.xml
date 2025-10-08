@@ -62,15 +62,17 @@
                 </xpath>
                 <xpath expr="//page[@name='order_lines']//list//field[@name='product_uom']" position="after">
                     <field name="carbon_co2"/>
-                    <field name="carbon_product_uom"/>
-                    <field name="co2_price"/>
+                    <field name="carbon_product_uom" optional="show"/>
+                    <field name="co2_price" optional="show"/>
                     <field name="offer_1"  optional="show"/>
                     <field name="offer_price_1"  optional="show"/>
                     <field name="offer_1_margin_price" optional="show"/>
+                    <field name="offer_1_margin_percentage" optional="show"/>
                     <field name="offer_2"  optional="show"/>
                     <field name="offer_price_2"  optional="show"/>
                     <field name="offer_2_margin_price" optional="show"/>
-ss                </xpath>
+                    <field name="offer_2_margin_percentage" optional="show" />
+               </xpath>
                 <!-- <xpath expr="//field[@name='amount_total']" position="after">
                     <field name="price_co2_total"/>
                 </xpath> -->

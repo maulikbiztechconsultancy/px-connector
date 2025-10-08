@@ -88,8 +88,8 @@ patch(ProductMatrixDialog.prototype,  {
                                                 product_id_from_js: variantIds,
                                                 product_quantities: variantQuantities,
                                                 default_product_tmpl_id:this.props.product_template_id,
-                                                related_printing_product_ids: data.related_printing_product_ids,
-                                                related_delivery_product_ids:data.related_delivery_product_ids,
+                                                // related_printing_product_ids: data.related_printing_product_ids,
+                                                // related_delivery_product_ids:data.related_delivery_product_ids,
                                                 showCpq:this.show_cpq
                                             },
                                         });
@@ -131,8 +131,8 @@ patch(ProductMatrixDialog.prototype,  {
                                             product_id_from_js: variantIds,
                                             product_quantities: variantQuantities,
                                             default_product_tmpl_id:this.props.product_template_id,
-                                            related_printing_product_ids: data.related_printing_product_ids,
-                                            related_delivery_product_ids:data.related_delivery_product_ids,
+                                            // related_printing_product_ids: data.related_printing_product_ids,
+                                            // related_delivery_product_ids:data.related_delivery_product_ids,
                                             showCpq:this.show_cpq
                                         },
                                     });

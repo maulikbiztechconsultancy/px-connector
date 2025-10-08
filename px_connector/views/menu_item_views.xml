@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <menuitem id="menu_px_connector_root" name="PX Connector" web_icon="px_connector,static/description/icon.png"/>
+    
+
+    <!-- Configuration -->
+    <menuitem id="menu_px_configuration" name="Configuration" parent="menu_px_connector_root" sequence="20"/>
+    <!-- Authorization -->
+    <menuitem id="menu_px_supplier_authorization" action="action_px_supplier_authorization" name="Authorization" sequence="1" parent="menu_px_configuration"/>
+    <!-- Mapping -->
+    <menuitem id="menu_mapping" name="Mapping" parent="menu_px_configuration" sequence="3"/>
+    <menuitem id="menu_px_fields_mapping" action="action_px_fields_mapping" name="Fields Mapping" sequence="1" parent="menu_mapping"/>
+
+    <!-- Jobs -->
+    <menuitem id="menu_px_queue_job" action="action_px_queue_job" name="Jobs" sequence="18" parent="menu_px_connector_root"/>
+
+    <!-- Suppliers -->
+    <menuitem id="menu_px_supplier_configuration" action="action_px_supplier_configuration" name="Suppliers" sequence="1" parent="menu_px_connector_root"/>
+
+    <!-- Operations -->
+    <menuitem id="menu_px_operations" name="Operations" parent="menu_px_connector_root" sequence="19"/>
+    <!-- Menu item to trigger the wizard -->
+    <menuitem id="menu_product_public_wizard" name="Set Product eCommerce" parent="menu_px_operations" action="action_product_public_wizard" sequence="100"/>
+
+</odoo>

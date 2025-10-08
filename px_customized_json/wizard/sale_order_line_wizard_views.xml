@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_sale_line_properties_wiz_inherit_pimcore_json_customization" model="ir.ui.view">
+        <field name="name">sale.line.properties.wiz.json.form</field>
+        <field name="model">sale.line.properties.wiz</field>
+        <field name="inherit_id" ref="pimcore_customization.sale_line_properties_wiz_form_view"/>
+        <field name="arch" type="xml">
+            <!-- Insert printing selection block -->
+            <xpath expr="//field[@name='service_product_ids']/.." position="attributes">
+                <attribute name="invisible">step != 'service' or is_product_has_config_id</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='delivery_product_ids']/.." position="attributes">
+                <attribute name="invisible">step in ['service','extra_charges'] or is_product_has_config_id</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='extra_charge_product_ids']/.." position="attributes">
+                <attribute name="invisible">step != 'extra_charges' or is_product_has_config_id</attribute>
+            </xpath>
+
+            <xpath expr="//footer/button[@name='action_next_step']" position="attributes">
+                <attribute name="invisible">step not in ['service','delivery'] or (step == 'delivery' and is_product_has_config_id)</attribute>
+            </xpath>
+
+            <xpath expr="//footer/button[@name='select_template_properties']" position="attributes">
+                <attribute name="invisible">step != 'extra_charges' or is_product_has_config_id</attribute>
+            </xpath>
+
+            <xpath expr="//form/sheet" position="inside">
+
+                <group name="product_variant" string="Product Variant" invisible="step != 'service' or not is_product_has_config_id">
+                    <field name="product_id" options="{'no_create': True}"/>
+                </group>
+                <separator string="There is no data available from the vendor API related to this printing service / product." 
+                        invisible="step != 'service' or not is_product_has_config_id or not is_printing_data_missing" />
+                <group name="add_printing_selection" string="Add Printing Selection" invisible="step != 'service' or not is_product_has_config_id or is_printing_data_missing">
+                    <field name="printing_location_id" options="{'no_open': True, 'no_create': True}"/>
+                    <field name="printing_method_id" options="{'no_open': True, 'no_create': True}"/>
+                    <field name="printing_color_and_size_id" options="{'no_open': True, 'no_create': True}"/>
+                    <button string="Add to List" type="object" name="action_add_selection" class="btn-primary"/>
+                </group>
+
+                <separator string="There is no data available from the vendor API related to this delivery service / product." 
+                        invisible="step != 'delivery' or not is_product_has_config_id or not is_shipping_data_missing" />
+                <group name="add_shipping_product" string="Add Shipping product" invisible="step != 'delivery' or not is_product_has_config_id or is_shipping_data_missing">
+                    <field name="shipping_id" options="{'no_open': True, 'no_create': True}"/>
+                </group>
+
+                <notebook invisible="step != 'service' or not is_product_has_config_id or is_printing_data_missing">
+                    <page name="selection_lines" string="Printing Selection Lines">
+                        <field name="selection_line_ids">
+                            <list create="false">
+                                <field name="product_id"/>
+                                <field name="printing_location_id"/>
+                                <field name="printing_method_id"/>
+                                <field name="printing_color_and_size_id"/>
+                            </list>
+                        </field>
+                        <field name="setup_charge_product_lines">
+                            <list create="false">
+                                <field name="product_id"/>
+                                <field name="setup_charge"/>
+                            </list>
+                        </field>
+                    </page>
+                    <page string="Raw Product Lines" invisible="1">
+                        <field name="raw_product_line_ids">
+                            <list editable="bottom" create="false" edit="false">
+                                <field name="product_id"/>
+                                <field name="qty"/>
+                            </list>
+                        </field>
+                    </page>
+                </notebook>
+            </xpath>
+
+            <!-- Add confirm button -->
+            <button name="select_template_properties" position="after">
+                <button string="Confirm" type="object" name="add_printing_product_from_json" class="btn-primary" invisible="step != 'delivery' or not is_product_has_config_id"/>
+            </button>
+
+        </field>
+    </record>
+</odoo>

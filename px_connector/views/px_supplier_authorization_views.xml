@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="view_px_supplier_authorization_form" model="ir.ui.view">
+        <field name="name">px.supplier.authorization.form</field>
+        <field name="model">px.supplier.authorization</field>
+        <field name="arch" type="xml">
+            <form string="Authorization">
+                <header>
+                    <!-- allow to unlock locked orders even if setting is not enabled (e.g. orders synchronized from connectors) -->
+                    <field name="refresh_token" invisible="1"/>
+                    <button name="get_px_supplier_token" type="object" string="Get Token" data-hotkey="x" class="btn-primary" invisible="refresh_token != False"/>
+                    <button name="get_px_refresh_token" type="object" string="Get Refresh Token" data-hotkey="x" invisible="refresh_token == False"/>
+                    <button name="get_suppiler_list" type="object" string="Get Suppliers" data-hotkey="x" class="btn-primary"/>
+                    <!-- <field name="state" widget="statusbar" statusbar_visible="draft,process,done"/> -->
+                </header>
+                <sheet>
+                    <h1>
+                        <field name="name" class="oe_inline"/>
+                    </h1>
+                    <group>
+                        <group name="login_details">
+                            <field name="url"/>
+                            <field name="login"/>
+                            <field name="password" widget="password" password="True"/>
+                            <separator string="Odoo Login"/>
+                            <field name="odoo_login"/>
+                            <field name="odoo_password" widget="password" password="True"/>
+                        </group>
+                        <group name="login_details" readonly="1">
+                            <field name="create_date" readonly="1"/>
+                            <field name="create_uid"/>
+                            <field name="write_date" readonly="1"/>
+                            <field name="write_uid"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="General Info">
+                            <group>
+                                <group>
+                                    <field name="token_endpoint"/>
+                                    <field name="refresh_endpoint"/>
+                                    <field name="token"/>
+                                    <field name="refresh_token"/>
+                                    <field name="expires_at"/>
+                                </group>
+                                <group name="comapny_deatails">
+                                    <field name="company_id"/>
+                                    <field name="currency_id"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Suppliers Details" name="suppliers_details" invisible="0">
+                            <field name="supplier_provide_ids" readonly="1">
+                                <list string="Suppliers" editable="bottom" limit="200">
+                                    <field name='name'/>
+                                    <field name='supplier_code'/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <!-- Chatter -->
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_px_supplier_authorization_tree" model="ir.ui.view">
+        <field name="name">px.supplier.authorization.tree</field>
+        <field name="model">px.supplier.authorization</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <!-- <field name="reference"/>
+
+                <field name="date_done"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+                <field name="state" decoration-success="state == 'done'" decoration-info="state == 'draft'"
+                       decoration-primary="state == 'process'" widget="badge"/> -->
+            </list>
+        </field>
+    </record>
+
+    <record id="view_px_supplier_authorization_search" model="ir.ui.view">
+        <field name="name">px.supplier.authorization.search</field>
+        <field name="model">px.supplier.authorization</field>
+        <field name="arch" type="xml">
+            <search string="Authorization">
+                <field name="name"/>
+                <!-- <field name="state"/> -->
+            </search>
+        </field>
+    </record>
+
+    <record id="action_px_supplier_authorization" model="ir.actions.act_window">
+        <field name="name">Authorization</field>
+        <field name="res_model">px.supplier.authorization</field>
+        <field name="view_mode">list,form,pivot,graph</field>
+        <field name="view_id" ref="view_px_supplier_authorization_tree"/>
+        <field name="search_view_id" ref="view_px_supplier_authorization_search"/>
+    </record>
+</odoo>

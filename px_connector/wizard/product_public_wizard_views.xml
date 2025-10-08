@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="view_product_public_wizard" model="ir.ui.view">
+        <field name="name">view.product.public.wizard</field>
+        <field name="model">product.public.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Update Category">
+                  <group>
+                    <group>
+                        <field name="product_category_id" />
+                    </group>
+                    <group>
+                        <field name="public_category_id" />
+                    </group>
+                  </group>
+                <footer>
+                    <button name="action_update_category" type="object" string="Apply" class="btn-primary" />
+                    <button string="Cancel" class="btn btn-secondary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action to open the wizard -->
+    <record id="action_product_public_wizard" model="ir.actions.act_window">
+        <field name="name">Set Product eCommerce</field>
+        <field name="res_model">product.public.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

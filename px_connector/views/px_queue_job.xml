@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="view_px_queue_job_form" model="ir.ui.view">
+        <field name="name">queue.job.form</field>
+        <field name="model">queue.job</field>
+        <field name="arch" type="xml">
+            <form string="Jobs">
+                <header>
+                    <!-- allow to unlock locked orders even if setting is not enabled (e.g. orders synchronized from connectors) -->
+                    <button name="start_process" type="object" string="Get Token" data-hotkey="x"/>
+                    <!-- <button name="action_draft" invisible="state != 'cancelled'" type="object" string="Set to Draft"
+                            data-hotkey="w"/> -->
+                    <field name="state" widget="statusbar" statusbar_visible="draft,process,done"/>
+                </header>
+                <sheet>
+                    <h1>
+                        <field name="name" class="oe_inline"/>
+                    </h1>
+                    <group>
+                        <group string="Based details" name="based_details">
+                            <field name="user_id"/>
+                            <field name="company_id"/>
+                            <field name="priority"/>
+                            <field name="result" readonly="1" invisible="1"/>
+                            <field name="error_reason" readonly="1"/>
+                        </group>
+                        <group string="Time Details" name="time_deatails">
+                            <field name="date_created"/>
+                            <field name="date_started"/>
+                            <field name="date_enqueued"/>
+                            <field name="date_done"/>
+                            <field name="exec_time"/>
+                        </group>
+                        <group string="Mapping Details" name="mapping_deatails">
+                            <field name="model_id"/>
+                            <field name="reference"/>
+                            <field name="sub_reference"/>
+                            <field name="mapping_record"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Result Details" name="result_details">
+                            <field name="result_text"/>
+                        </page> 
+                    </notebook>
+                </sheet>
+                <!-- Chatter -->
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_px_queue_job_tree" model="ir.ui.view">
+        <field name="name">queue.job.tree</field>
+        <field name="model">queue.job</field>
+        <field name="arch" type="xml">
+            <list string="Jobs">
+                <field name="name"/>
+                <field name="reference"/>
+                <field name="state" decoration-success="state == 'done'" decoration-info="state == 'draft'"
+                       decoration-primary="state == 'process'" widget="badge"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_px_queue_job_search" model="ir.ui.view">
+        <field name="name">queue.job.search</field>
+        <field name="model">queue.job</field>
+        <field name="arch" type="xml">
+            <search string="Jobs">
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_px_queue_job" model="ir.actions.act_window">
+        <field name="name">Jobs</field>
+        <field name="res_model">queue.job</field>
+        <field name="view_mode">list,form,pivot,graph</field>
+        <field name="view_id" ref="view_px_queue_job_tree"/>
+        <field name="search_view_id" ref="view_px_queue_job_search"/>
+    </record>
+</odoo>

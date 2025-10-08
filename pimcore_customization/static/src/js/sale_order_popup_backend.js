@@ -135,8 +135,8 @@ patch(SaleOrderLineProductField.prototype, {
                                                     views: [[false, "form"]],
                                                     context:{
                                                         default_product_tmpl_id: productTemplateId,
-                                                        related_printing_product_ids: result.related_printing_product_ids,
-                                                        related_delivery_product_ids:result.related_delivery_product_ids,
+                                                        // related_printing_product_ids: result.related_printing_product_ids,
+                                                        // related_delivery_product_ids:result.related_delivery_product_ids,
                                                         active_id: newSaleOrderId,
                                                         showCpq:showCpq,
                                                     },
@@ -166,8 +166,8 @@ patch(SaleOrderLineProductField.prototype, {
                                                 views: [[false, "form"]],
                                                 context:{
                                                     default_product_tmpl_id: productTemplateId,
-                                                    related_printing_product_ids: result.related_printing_product_ids,
-                                                    related_delivery_product_ids:result.related_delivery_product_ids,
+                                                    // related_printing_product_ids: result.related_printing_product_ids,
+                                                    // related_delivery_product_ids:result.related_delivery_product_ids,
                                                     active_id: saleOrderId,
                                                     showCpq:showCpq
                                                 },

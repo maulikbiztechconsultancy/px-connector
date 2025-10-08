@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="view_px_fields_mapping_form" model="ir.ui.view">
+        <field name="name">fields.mapping.form</field>
+        <field name="model">fields.mapping</field>
+        <field name="arch" type="xml">
+            <form string="Fields Mapping">
+                <header>
+                    <!-- allow to unlock locked orders even if setting is not enabled (e.g. orders synchronized from connectors) -->
+                </header>
+                <sheet>
+                    <h1>
+                        <field name="name" class="oe_inline"/>
+                    </h1>
+                    <group>
+                        <group string="Based details" name="based_details">
+                            <field name="name"/>
+                            <field name="model_id"/>
+                            <field name="odoo_field_id"/>
+                            <field name="technical_name" readonly="1" invisible="1"/>
+                            <field name="active" readonly="1"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_px_fields_mapping_tree" model="ir.ui.view">
+        <field name="name">fields.mapping.tree</field>
+        <field name="model">fields.mapping</field>
+        <field name="arch" type="xml">
+            <list string="Fields Mapping" editable="bottom">
+                <field name="name"/>
+                <field name="model_id"/>
+                <field name="odoo_field_id"/>
+                <field name="technical_name"/>
+                <field name="active"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_px_fields_mapping_search" model="ir.ui.view">
+        <field name="name">fields.mapping.search</field>
+        <field name="model">fields.mapping</field>
+        <field name="arch" type="xml">
+            <search string="Fields Mapping">
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_px_fields_mapping" model="ir.actions.act_window">
+        <field name="name">Fields Mapping</field>
+        <field name="res_model">fields.mapping</field>
+        <field name="view_mode">list,form,pivot,graph</field>
+        <field name="view_id" ref="view_px_fields_mapping_tree"/>
+        <field name="search_view_id" ref="view_px_fields_mapping_search"/>
+    </record>
+</odoo>

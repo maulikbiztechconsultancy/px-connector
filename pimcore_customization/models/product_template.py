@@ -57,30 +57,31 @@ class ProductTemplate(models.Model):
             delivery_ids.append(variant.shipping_variant_ids.ids)
             related_delivery_product_ids = [item for sublist in delivery_ids for item in sublist]
             related_product_ids = [item for sublist in varinat_ids for item in sublist]
-        return {'related_printing_product_ids': related_product_ids or [],'related_delivery_product_ids':related_delivery_product_ids or []}
+        return {'related_printing_product_ids': [],'related_delivery_product_ids':[]}
 
     def get_data_val(self,combination_ids):
         combination = self.env['product.template.attribute.value'].browse(combination_ids)
         variant = self._get_variant_for_combination(combination)
-        related_product_ids = self.get_related_printing_product_ids(variant).get('related_printing_product_ids')
-        related_delivery_product_ids = self.get_related_printing_product_ids(variant).get('related_delivery_product_ids')
+        # related_product_ids = self.get_related_printing_product_ids(variant).get('related_printing_product_ids')
+        # related_delivery_product_ids = self.get_related_printing_product_ids(variant).get('related_delivery_product_ids')
         return {'variant_id': variant.id if variant else None,
-                'related_printing_product_ids':
-                 related_product_ids if related_product_ids else [],
-                'related_delivery_product_ids': related_delivery_product_ids if related_delivery_product_ids else []
+                # 'related_printing_product_ids':
+                #  related_product_ids if related_product_ids else [],
+                # 'related_delivery_product_ids': related_delivery_product_ids if related_delivery_product_ids else []
                 }
-    def get_data_val_config(self):
-        related_product_ids = self.get_related_printing_product_ids(self.product_variant_ids).get('related_printing_product_ids')
-        related_delivery_product_ids = self.get_related_printing_product_ids(self.product_variant_ids).get('related_delivery_product_ids')
-        return {'related_printing_product_ids':related_product_ids if related_product_ids else [],'related_delivery_product_ids': related_delivery_product_ids if related_delivery_product_ids else []}
+    # def get_data_val_config(self):
+    #     related_product_ids = self.get_related_printing_product_ids(self.product_variant_ids).get('related_printing_product_ids')
+    #     related_delivery_product_ids = self.get_related_printing_product_ids(self.product_variant_ids).get('related_delivery_product_ids')
+    #     return {'related_printing_product_ids':related_product_ids if related_product_ids else [],'related_delivery_product_ids': related_delivery_product_ids if related_delivery_product_ids else []}
 
     def get_attribute_line_data(self):
         if self:
-            related_product_ids = self.get_related_printing_product_ids(self.product_variant_ids).get('related_printing_product_ids')
-            related_delivery_product_ids = self.get_related_printing_product_ids(self.product_variant_ids).get('related_delivery_product_ids')
-            return {'related_printing_product_ids':related_product_ids if related_product_ids else [],
+            # related_product_ids = self.get_related_printing_product_ids(self.product_variant_ids).get('related_printing_product_ids')
+            # related_delivery_product_ids = self.get_related_printing_product_ids(self.product_variant_ids).get('related_delivery_product_ids')
+            return {
+                    # 'related_printing_product_ids':related_product_ids if related_product_ids else [],
                     'has_configurable_attributes':self.has_configurable_attributes,
-                    'related_delivery_product_ids': related_delivery_product_ids if related_delivery_product_ids else [],
+                    # 'related_delivery_product_ids': related_delivery_product_ids if related_delivery_product_ids else [],
                      }
 
     def product_service_type_data(self):

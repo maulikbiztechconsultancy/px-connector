@@ -82,7 +82,7 @@
                                                     <tr>
                                                         <td colspan="2" style="padding:20px 10px 30px;">
                                                             <h2 style="font-size: 20px;color: #414046;font-weight:900;"><t t-esc="data['product_name']"/></h2>
-                                                            <p style="font-size: 14px;margin: 7px 0;">Print Specifiation / branding</p>
+                                                            <p style="font-size: 14px;margin: 7px 0;">Print Specifiation /  <t t-esc="data['printing_product_names']"/></p>
                                                             <span style="color: #a2a19d;font-weight: 300;font-size: 14px;line-height: 17px;"><t t-esc="data['product_description']"/></span>
                                                         </td>
                                                     </tr>

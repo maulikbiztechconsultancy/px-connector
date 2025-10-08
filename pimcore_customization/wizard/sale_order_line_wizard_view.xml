@@ -12,7 +12,7 @@
                         <field name="product_template_id" invisible="1"/>
                     </group>
                     <group string="Printing Products" invisible = "step != 'service'">
-                        <field name="service_product_ids" domain="[('id', 'in', context.get('related_printing_product_ids', []))]">
+                        <field name="service_product_ids">
                             <list editable="bottom" create="false" edit="true">
                                 <field name="name"/>
                                 <field name="default_code"/>
@@ -25,7 +25,7 @@
                         </field>
                     </group>
                     <group string="Delivery Products" invisible = "step in  ['service','extra_charges']">
-                        <field name="delivery_product_ids" domain="[('id', 'in', context.get('related_delivery_product_ids', []))]" >
+                        <field name="delivery_product_ids">
                             <list editable="bottom" create="false" edit="true">
                                 <field name="name"/>
                                 <field name="default_code"/>
@@ -33,7 +33,7 @@
                             </list>
                         </field>
                     </group>
-                    <!-- <group string="Extra Charges Products" invisible = "step != 'extra_charges'">
+                    <group string="Extra Charges Products" invisible = "step != 'extra_charges'">
                         <field name="extra_charge_product_ids">
                             <list editable="bottom" create="false" edit="true">
                                 <field name="name"/>
@@ -41,8 +41,7 @@
                                 <field name="lst_price"/>
                             </list>
                         </field>
-                    </group> -->
-
+                    </group>
                 </sheet>
                 <footer>
                     <button string="Next" type="object" name="action_next_step" class="btn-primary" invisible = "step not in  ['service','delivery']"/>

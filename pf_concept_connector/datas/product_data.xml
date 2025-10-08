@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- <record id="vendor_pf_concept" model="res.partner">
+        <field name="name">PF Concept</field>
+        <field name="supplier_rank">1</field>
+    </record> -->
+
+    <!-- Printing Details -->
+    <!-- <record id="printing_product_service_pfconcept" model="product.template">
+        <field name="name">PF Concept Printing Service</field>
+        <field name="type">service</field>
+        <field name="purchase_ok">True</field>
+        <field name="sale_ok">True</field>
+        <field name="service_to_purchase">True</field>
+        <field name="default_code">pf_concept</field>
+    </record>
+    <record id="printing_product_supplierinfo_pfconcept" model="product.supplierinfo">
+        <field name="name" ref="vendor_pf_concept"/>
+        <field name="product_id" ref="printing_product_service_pfconcept"/>
+        <field name="min_qty">1</field>
+        <field name="price">0.0</field>
+    </record> -->
+
+    <!-- Shipping Details -->
+    <!-- <record id="shipping_product_service_pfconcept" model="product.template">
+        <field name="name">PF Concept Shipping Service</field>
+        <field name="type">service</field>
+        <field name="purchase_ok">True</field>
+        <field name="sale_ok">True</field>
+        <field name="service_to_purchase">True</field>
+        <field name="default_code">pf_concept</field>
+    </record>
+    <record id="shipping_product_supplierinfo_pfconcept" model="product.supplierinfo">
+        <field name="name" ref="vendor_pf_concept"/>
+        <field name="product_id" ref="shipping_product_service_pfconcept"/>
+        <field name="min_qty">1</field>
+        <field name="price">0.0</field>
+    </record> -->
+
+    <!-- Extra Charge or Setup Charge -->
+    <!-- <record id="extra_product_service_pfconcept" model="product.template">
+        <field name="name">PF Concept Extra Charge Service</field>
+        <field name="type">service</field> 
+        <field name="purchase_ok">True</field>
+        <field name="sale_ok">True</field>
+        <field name="service_to_purchase">True</field>
+        <field name="default_code">pf_concept</field>
+    </record>
+    <record id="extra_product_supplierinfo_pfconcept" model="product.supplierinfo">
+        <field name="name" ref="vendor_pf_concept"/>
+        <field name="product_id" ref="extra_product_service_pfconcept"/>
+        <field name="min_qty">1</field>
+        <field name="price">0.0</field>
+    </record> -->
+
+    <record id="ir_cron_working" model="ir.cron">
+        <field name="name">EDI: Working</field>
+        <field name="model_id" ref="px_connector.model_queue_job"/>
+        <field name="state">code</field>
+        <field name="code">model.start_process_now(job_count=250)</field>
+        <field name="interval_number">15</field>
+        <field name="interval_type">minutes</field>
+    </record>
+</odoo>

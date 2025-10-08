@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    
+        <record id="product_normal_form_view_inherit" model="ir.ui.view">
+            <field name="name">product.normal.form.view.inherit</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='type']" position="after">
+                    <field name="product_service_type"/>
+                    <field name="supplier_id" readonly="0"/>
+                </xpath>
+                <xpath expr="//notebook" position="inside">
+                    <page string="Suppiler Stock">
+                        <field name="stock_location_ids">
+                            <list>
+                                <field name="name"/>
+                                <field name="qty"/>
+                            </list>
+                        </field>
+                    </page>
+                    <page string="Raw Data">
+                        <field name="raw_json" widget="text"/>
+                    </page>
+                    <page string="Printing Data">
+                        <field name="printing_json" widget="text"/>
+                    </page>
+                    <page string="Shipping Data">
+                        <field name="shipping_json" widget="text"/>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+</odoo>

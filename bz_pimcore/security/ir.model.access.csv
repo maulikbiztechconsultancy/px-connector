@@ -1,8 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-bz_pimcore.access_pimore_vender_config,access_pimore_vender_config,bz_pimcore.model_pimore_vender_config,base.group_user,1,1,1,1
-bz_pimcore.access_product_field_line,access_product_field_line,bz_pimcore.model_product_field_line,base.group_user,1,1,1,1
-bz_pimcore.access_variant_field_line,access_variant_field_line,bz_pimcore.model_variant_field_line,base.group_user,1,1,1,1
-bz_pimcore.access_category_field_line,access_category_field_line,bz_pimcore.model_category_field_line,base.group_user,1,1,1,1
-bz_pimcore.access_attribute_line_field_line,access_attribute_line_field_line,bz_pimcore.model_attribute_line_field_line,base.group_user,1,1,1,1
-bz_pimcore.access_product_category_relation,access_product_category_relation,bz_pimcore.model_product_category_relation,base.group_user,1,1,1,1
-bz_pimcore.access_product_location_stock,access_product_location_stock,bz_pimcore.model_product_location_stock,base.group_user,1,1,1,1

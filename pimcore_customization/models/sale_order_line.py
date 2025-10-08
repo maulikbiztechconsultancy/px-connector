@@ -47,53 +47,103 @@ class SaleOrderLine(models.Model):
         digits='Product Price',
         store=True, readonly=False, precompute=True)
     offer_1 = fields.Float("Offer 1")
-    offer_price_1 = fields.Float("Offer price 1")
-    offer_1_margin_price = fields.Float("Margin Price 1" , compute="_compute_margin_price")
+    offer_price_1 = fields.Float("Offer 1 Price")
+    offer_1_margin_price = fields.Float("Margin Price 1" )
+    offer_1_margin_percentage= fields.Float("Offer 1 Margin (%)")
     offer_2 = fields.Float("Offer 2")
-    offer_price_2 = fields.Float("Offer price 2")
-    offer_2_margin_price = fields.Float("Margin Price 2",compute="_compute_margin_price")
+    offer_price_2 = fields.Float("Offer 2 Price")
+    offer_2_margin_price = fields.Float("Margin Price 2")
+    offer_2_margin_percentage= fields.Float("Offer 2 Margin (%)")
+    skip_offer_onchange = fields.Boolean('Skip Offer Onchange', default=False)
 
-    @api.depends('product_uom_qty')
-    def _compute_margin_price(self):
+    @api.onchange('product_uom_qty')
+    def _onchange_product_uom_qty_set_offer(self):
+        """When product qty changes, reset offers and recompute based on pricelist."""
         for data in self:
-            data.offer_1 = 0.0
-            data.offer_price_1 = 0.0
-            data.offer_1_margin_price = 0.0
-            data.offer_2 = 0.0
-            data.offer_price_2 = 0.0
-            data.offer_2_margin_price = 0.0
-            if data.product_id.product_service_type in ['raw_product','finished'] and data.product_id.pricelist_item_count:
-                pricelist_item = self.env['product.pricelist.item'].search([
-                    ('product_id','=',data.product_id.id),
-                    ('min_quantity','>=',float(data.product_uom_qty))
-                ], limit=2, order='id desc')
-                count = 0
-                for pricelist in pricelist_item:
-                    if count == 0:
+            if (
+                data.product_id
+                and data.product_id.product_service_type in ['raw_product', 'finished']
+                and data.product_id.pricelist_item_count
+            ):
+                data.offer_1 = 0.0
+                data.offer_price_1 = 0.0
+                data.offer_1_margin_price = 0.0
+                data.offer_1_margin_percentage = 0.0
+                data.offer_2 = 0.0
+                data.offer_price_2 = 0.0
+                data.offer_2_margin_price = 0.0
+                data.offer_2_margin_percentage = 0.0
+                pricelist_items = self.env['product.pricelist.item'].search([
+                    ('product_id', '=', data.product_id.id),
+                    ('min_quantity', '>', float(data.product_uom_qty))
+                ], limit=2, order='min_quantity asc')
+                for idx, pricelist in enumerate(pricelist_items):
+                    if idx == 0:
                         data.offer_1 = pricelist.min_quantity
                         data.offer_price_1 = pricelist.fixed_price
-                        # Compute offer 1
-                        offer_amount_1 = (data.offer_1 * data.offer_price_1) if data.offer_1 and data.offer_price_1 else 0.0
-                        actual_amount_offer_1 = (data.offer_1 * data.price_unit) if data.offer_1 else 0.0
-                        data.offer_1_margin_price = offer_amount_1 - actual_amount_offer_1 
-                        count += 1
+                        data._compute_offer_margin(1)
                     else:
                         data.offer_2 = pricelist.min_quantity
                         data.offer_price_2 = pricelist.fixed_price
-                        # Compute offer 2
-                        offer_amount_2 = (data.offer_2 * data.offer_price_2) if data.offer_2 and data.offer_price_2 else 0.0
-                        actual_amount_offer_2 = (data.offer_2 * data.price_unit) if data.offer_2 else 0.0
-                        data.offer_2_margin_price = offer_amount_2 - actual_amount_offer_2 
+                        data._compute_offer_margin(2)
 
-    @api.onchange('offer_1','offer_price_1','offer_2','offer_price_2')
-    def onchange_offer_price(self):
+    def _compute_offer_margin(self, offer_no):
+        """Helper to compute margin price & percentage for given offer (1 or 2)."""
         for data in self:
-            offer_amount_1 = (data.offer_1 * data.offer_price_1) if data.offer_1 and data.offer_price_1 else 0.0
-            actual_amount_offer_1 = (data.offer_1 * data.price_unit) if data.offer_1 else 0.0
-            data.offer_1_margin_price = offer_amount_1 - actual_amount_offer_1 
-            offer_amount_2 = (data.offer_2 * data.offer_price_2) if data.offer_2 and data.offer_price_2 else 0.0
-            actual_amount_offer_2 = (data.offer_2 * data.price_unit) if data.offer_2 else 0.0
-            data.offer_2_margin_price = offer_amount_2 - actual_amount_offer_2 
+            if offer_no == 1:
+                qty, price = data.offer_1, data.offer_price_1
+            else:
+                qty, price = data.offer_2, data.offer_price_2
+            if qty and price and data.price_unit:
+                offer_amount = qty * price
+                actual_amount = qty * data.price_unit
+                margin_price = (actual_amount - offer_amount) / qty
+                margin_percentage = (margin_price * 100) / data.price_unit
+            else:
+                margin_price = 0.0
+                margin_percentage = 0.0
+            if offer_no == 1:
+                data.offer_1_margin_price = margin_price
+                data.offer_1_margin_percentage = margin_percentage
+            else:
+                data.offer_2_margin_price = margin_price
+                data.offer_2_margin_percentage = margin_percentage
+
+    @api.onchange('offer_1', 'offer_price_1', 'offer_2', 'offer_price_2', 'offer_1_margin_percentage', 'offer_2_margin_percentage')
+    def onchange_offer_price(self):
+
+        def compute_offer_margin_data(qty, offer_price, price_unit):
+            offer_amount = (qty * offer_price) if qty and offer_price else 0.0
+            actual_amount = (qty * price_unit) if qty else 0.0
+            margin_price = ((actual_amount - offer_amount) / qty) if qty else 0.0
+            margin_percentage = ((margin_price * 100) / price_unit) if price_unit else 0.0
+            return margin_price, margin_percentage
+        for rec in self:
+            changed_offer_1 = rec._origin.offer_1 != rec.offer_1 or rec._origin.offer_price_1 != rec.offer_price_1
+            changed_offer_2 = rec._origin.offer_2 != rec.offer_2 or rec._origin.offer_price_2 != rec.offer_price_2
+            changed_offer_1_margin_percentage = rec._origin.offer_1_margin_percentage != rec.offer_1_margin_percentage
+            changed_offer_2_margin_percentage = rec._origin.offer_2_margin_percentage != rec.offer_2_margin_percentage
+
+            if rec.skip_offer_onchange:
+                rec.skip_offer_onchange = False
+                return
+
+            if changed_offer_1:
+                rec.offer_1_margin_price, rec.offer_1_margin_percentage = compute_offer_margin_data(
+                    rec.offer_1, rec.offer_price_1, rec.price_unit
+                )
+            elif changed_offer_1_margin_percentage and rec._origin.offer_1_margin_percentage:
+                rec.skip_offer_onchange = True
+                new_price =((rec.offer_1_margin_percentage * rec.offer_price_1) / rec._origin.offer_1_margin_percentage)
+                rec.offer_price_1 = new_price
+
+
+            if changed_offer_2:
+                rec.offer_2_margin_price, rec.offer_2_margin_percentage = compute_offer_margin_data(
+                    rec.offer_2, rec.offer_price_2, rec.price_unit
+                )
+            elif changed_offer_2_margin_percentage and rec._origin.offer_2_margin_percentage:
+                rec.offer_price_2 =((rec.offer_2_margin_percentage * rec.offer_price_2) / rec._origin.offer_2_margin_percentage)
 
     @api.onchange('product_uom_qty','carbon_co2')
     def _onchange_product_uom_qty(self):
@@ -115,46 +165,38 @@ class SaleOrderLine(models.Model):
             product.image_128 = product.product_id.image_128
 
     def _purchase_service_generation(self):
-        """override method from the sale_purchase module to stop creating PO for subcontract service product
         """
-        sale_line_purchase_map = {}
+        Create one Purchase Order per Sale Order and Vendor.
+        Reuses existing draft PO for the same vendor and Sale Order.
+        """
+        line_groups = defaultdict(list)
+
         for line in self:
-            line = line.with_company(line._purchase_service_get_company())
-            # Do not regenerate PO line if the SO line has already created one in the past (SO cancel/reconfirmation case)
-
-            section_lines = self.env['sale.order.line'].search([
-                    ('parent_line_id','=',line.parent_line_id),
-                    ('order_id','=',line.order_id.id),
-                    ('product_type','=','consu'),
-                    ])
-
-            route_names = section_lines.mapped('product_template_id.route_ids.name')
-            if 'Manufacture' in route_names:
+            if line.display_type or line.purchase_line_ids:
+                continue
+            if not (line.product_id.service_to_purchase or line.product_id.type in ['product', 'consu']):
                 continue
 
-            if line.product_id.service_to_purchase and not line.purchase_line_count:
-                result = line._purchase_service_create()
-                sale_line_purchase_map.update(result)
+            supplierinfo = line._purchase_service_match_supplier()
+            if not supplierinfo:
+                continue
 
-        return sale_line_purchase_map
+            vendor = supplierinfo.partner_id
+            key = (line.order_id.id, vendor.id)
+            line_groups[key].append((line, supplierinfo))
 
-    def _purchase_service_match_purchase_order(self, partner, company=False):
-        """
-        Override to block Odoo from reusing existing purchase orders for service_to_purchase products.
-        Always returns an same so with same vendor recordset so that a new PO is created.
-        """
-        if self.company_id.configuration_po_propogation == 'restrict_po_per_order':
-            company_id = company.id if company else self.env.company.id
-            origin = self.order_id.name
+        for (so_id, vendor_id), grouped_lines in line_groups.items():
+            first_line = grouped_lines[0][0]
+            company = first_line._purchase_service_get_company()
 
-            po = self.env['purchase.order'].search([
-                ('partner_id', '=', partner.id),
-                ('state', '=', 'draft'),
-                ('company_id', '=', company_id),
-                ('origin', '=', origin),
-            ], order='id desc', limit=1)
-            return po
-        return super()._purchase_service_match_purchase_order(partner, company=company)
+            # Get or create PO via match_or_create method (ensures PO reuse)
+            po = first_line._match_or_create_purchase_order(grouped_lines[0][1])
+
+            # Add lines to PO
+            for line, supplierinfo in grouped_lines:
+                line = line.with_company(company)
+                po_line_vals = line._purchase_service_prepare_line_values(po)
+                self.env['purchase.order.line'].create(po_line_vals)
 
     @api.depends('parent_line_id', 'product_id')
     def _compute_cpq_bunch(self):
@@ -245,6 +287,33 @@ class SaleOrderLine(models.Model):
                         except Exception:
                             raise ValidationError(f"The file uploaded in '{field_name}' is not a valid image. Only JPG, PNG, or SVG are allowed!")
 
+    # @api.depends('product_id', 'product_uom', 'product_uom_qty')
+    # def _compute_pricelist_item_id(self):
+    #         """
+    #             This Method first get the all price lists data.
+    #             Then filters the price rule that has the lowest price and then applied it to sale order line.
+    #             Also it set the related pricelist on the saleorder line.
+    #         """
+    #         for line in self:
+    #             if not line.product_id or line.display_type or not line.order_id.pricelist_id:
+    #                 line.pricelist_item_id = False
+    #             else:
+    #                 data_list = []
+    #                 cust_price_lists = self.env['product.pricelist'].search([])
+    #                 for pl in cust_price_lists:
+    #                     pricelist_item = pl._get_product_rule(line.product_id, quantity=line.product_uom_qty or 1.0,
+    #                                                         uom=line.product_uom, date=line.order_id.date_order)
+    #                     data_list.append(pricelist_item)
+    #                 if all(not x for x in data_list):
+    #                     line.pricelist_item_id = not all(not x for x in data_list)
+    #                 else:
+    #                     filtered_data_list = [item for item in data_list if item is not False]
+    #                     cust_product_price_list_items = self.env['product.pricelist.item'].browse(filtered_data_list)
+    #                     min_price = min(cust_product_price_list_items.mapped('fixed_price'))
+    #                     cust_product_price_list_item_with_min_price = cust_product_price_list_items.filtered(lambda x: x.fixed_price == min_price)[0]
+    #                     line.pricelist_item_id = cust_product_price_list_item_with_min_price.id
+    #                     line.pricelist_id = cust_product_price_list_item_with_min_price.pricelist_id.id
+
     @api.model
     def create(self, vals):
         # for vals in vals_list:
@@ -282,6 +351,8 @@ class SaleOrderLine(models.Model):
         # ---- Calculate Total Quantity for Service Product Line ---- #
         for order in order_line.mapped('order_id'):
                 self._update_service_line_qty(order)
+        if 'product_uom_qty' in vals and vals.get('product_uom_qty', 0) > 0 and vals.get('product_service_type') in ['raw_product','finished']:
+            order_line._onchange_product_uom_qty_set_offer()
 
         return order_line
 
@@ -307,7 +378,7 @@ class SaleOrderLine(models.Model):
             section_id = section.parent_line_id
 
             related_lines = order.order_line.filtered(
-                lambda l: l.parent_line_id == section_id and l.display_type != 'line_section' and l.product_service_type not in ['printing', 'delivery', 'extra_charges']
+                lambda l: l.parent_line_id == section_id and l.display_type != 'line_section' and l.product_service_type not in ['printing', 'delivery','extra_charges']
             )
             total_quantity = sum(related_lines.mapped('product_uom_qty'))
 
@@ -543,6 +614,7 @@ class SaleOrder(models.Model):
                     'target': 'new',
                     'context': ctx,
                 }
+
     @api.model          
     def data_simplify_mail_template(self):
         new_lst = []
@@ -580,11 +652,12 @@ class SaleOrder(models.Model):
                         idx += 1
                     main_lines = [l for l in section_lines if l.product_service_type in ['finished','raw_product']]
                     printing_lines = [l for l in section_lines if l.product_service_type == 'printing' and (l.product_approval_status == 'reject' or not l.product_approval_status)]
-                    for main, p in zip(main_lines, printing_lines):
+                    main = main_lines[0] if main_lines else False
+                    for p in printing_lines:
                         processed_data.append({
                             'order_id': order.id,
-                            'main_line_id': main.id,
-                            'main_product': main.product_id.name,
+                            'main_line_id': main.id if main else False,
+                            'main_product': main.product_id.name if main else '',
                             'line_id': p.id,
                             'printing_product': p.product_id.display_name,
                             'approval_status': p.product_approval_status
@@ -717,6 +790,7 @@ class SaleOrder(models.Model):
 
                         delivery_charge = delivery.price_unit if delivery and delivery.price_unit else 0.0
                         total_print_amount = sum(l.price_unit for l in section_lines if l.product_service_type == 'printing' and l.parent_line_id == main.parent_line_id)
+                        printing_product_names_str = ", ".join(l.product_id.display_name for l in section_lines if l.product_service_type == 'printing' and l.parent_line_id == main.parent_line_id)
                         total_delivery_amount = sum(l.price_unit for l in section_lines if l.product_service_type == 'delivery' and l.parent_line_id == main.parent_line_id)
                         total_extra_amount = sum(l.price_unit for l in section_lines if l.product_service_type == 'extra_charges' and l.parent_line_id == main.parent_line_id)
                         print_qty = next((l.product_uom_qty for l in section_lines if l.product_service_type == 'printing' and l.parent_line_id == main.parent_line_id),0)
@@ -733,7 +807,7 @@ class SaleOrder(models.Model):
                             'product_uom_qty': main.product_uom_qty,
                             'delivery_charge': delivery_charge,
                             'price_unit': price_unit,
-                            'price_subtotal': main.price_subtotal,
+                            'price_subtotal': (round(price_unit, 2) * main.product_uom_qty),
                             'offer_1': main.offer_1 or 0.0,
                             'offer_price_1': main.offer_price_1 or 0.0,
                             'offer_amount_1': offer_amount_1,
@@ -745,7 +819,8 @@ class SaleOrder(models.Model):
                             'carbon_co2': main.carbon_co2 or 0.0,
                             'carbon_total': (main.carbon_co2 * main.product_uom_qty) if main.carbon_co2 else 0.0,
                             'offset_total': main.co2_price or 0.0,
-                            'setup_charge':main.product_id.setup_charge or 0.0
+                            'setup_charge':main.product_id.setup_charge or 0.0,
+                            'printing_product_names':printing_product_names_str,
                         })
                 else:
                     idx += 1
@@ -763,9 +838,9 @@ class MailMesage(models.TransientModel):
             order_id.count_for_approved_cycle_complete += 1
             if order_id.count_for_approved_cycle_complete == order_id.company_id.artwork_approval  or all(line.product_approval_status in ['accept','accept_with_change']  for line in order_id.order_line.filtered(lambda x: x.product_service_type == 'printing')):
                 order_id.state = 'approved'
-                if order.state == 'approved':
+                if order_id.state == 'approved':
                     template_approved = request.env.ref('pimcore_customization.email_template_sale_order_approved')
-                    template_approved.sudo().send_mail(order.id, True)
+                    template_approved.sudo().send_mail(order_id.id, True)
         return res
 
 class StockRule(models.Model):
