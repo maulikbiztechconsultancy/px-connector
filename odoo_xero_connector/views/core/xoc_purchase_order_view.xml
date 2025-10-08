@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2015-Present Webkul Software Pvt. Ltd. (<https://webkul.com/>) -->
+<!-- See LICENSE file for full copyright and licensing details. -->
+<!-- "License URL : <https://store.webkul.com/license.html/>" -->
+
+<odoo>
+    <data>
+    	<record id="inherit_xoc_view_purchase_order_form" model="ir.ui.view">
+            <field name="name">Purchase View Inherited</field>
+            <field name="model">purchase.order</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form" />
+            <field name="arch" type="xml">
+                <field name="date_order" position="after">
+                      <field name="xero_doc_number"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

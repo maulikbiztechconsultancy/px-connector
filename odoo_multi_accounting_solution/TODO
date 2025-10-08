@@ -1,0 +1,3 @@
+* show password field if debug mode is enabled
+* add method for realtime order, invoice, payment status synchronization.
+* add filters in the import operation view.

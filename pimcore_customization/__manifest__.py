@@ -1,0 +1,67 @@
+# -*- coding: utf-8 -*-
+# Part of Appjetty. See LICENSE file for full copyright and licensing details.
+{
+    'name': 'PrintXpand',
+    'version': '18.0.1.0.0',
+    'category': 'Manufacturing, Industries ,Productivity',
+    'summary': 'PrintXpand Community',
+    'description': """
+        This module for Odoo Custom features for printing industries.
+    """,
+    'author': 'Appjetty',
+    'license': 'OPL-1',
+    'website': 'https://www.appjetty.com/',
+    'depends': ['website','portal', 'auth_signup', 'website_sale_stock','stock',
+        'web','delivery', 'purchase', 'mrp', 'crm', 'product_expiry','sale_management',
+        'sale_crm','account','product_matrix','stock_dropshipping',
+        'sale','sale_product_matrix','mail','sale_margin'],
+
+    'data': [
+        'security/security.xml',
+        "security/ir.model.access.csv",
+        "data/mail_template.xml",
+        "views/sale_order_line_views.xml",
+        "views/view_printing_method.xml",
+        "views/view_product_template.xml",
+        "views/view_sale_order.xml",
+        "views/purchase_order_view.xml",
+        "wizard/sale_order_line_wizard_view.xml",
+        "wizard/mrp_wokorder_wizard_view.xml",
+        "views/res_company_view.xml",
+        "views/portal_purchase_templates.xml",
+        "views/view_res_config_settings.xml",
+        "views/artwork_approval_template.xml",
+        "views/cpq_product_action.xml",
+        "views/mrp_workcenter_availability_views.xml",
+        "views/printxpand_menu_view.xml",
+        "views/cpq_product_info.xml",
+        "views/cpq_create_quotation_view.xml",
+        "views/mrp_workorder_action_view.xml",
+        "report/purchase_design_report.xml",
+        "report/cpq_report.xml",
+        "report/sale_order_report.xml",
+        "report/quotation_sale_report.xml",
+    ],
+    'assets': {
+        'web.assets_backend': [
+            'pimcore_customization/static/src/js/list_renderer.js',
+            'pimcore_customization/static/src/js/sale_order_utils.js',
+            'pimcore_customization/static/src/js/cpq_product_info.js',
+            'pimcore_customization/static/src/xml/cpq_product_info_view.xml',
+            # 'pimcore_customization/static/src/scss/sale_order_popup_backend.scss',
+            'pimcore_customization/static/src/js/sale_order_popup_backend.js',
+            'pimcore_customization/static/src/js/printing_image_info.js',
+            'pimcore_customization/static/src/xml/printing_image_view.xml',
+            'pimcore_customization/static/src/js/product_configurator_dialog.js',
+            'pimcore_customization/static/src/xml/product_configurator_dailog.xml',
+            'pimcore_customization/static/src/js/product_matrix_dialog.js',
+            'pimcore_customization/static/src/xml/product_matrix_dialog.xml',
+            'pimcore_customization/static/src/js/canvasjs.min.js',
+        ],
+         'web.assets_frontend': [
+            'pimcore_customization/static/src/js/artwork_approval.js',
+            ]
+    },
+    'application':True,
+    'installable': True,
+}

@@ -1,0 +1,5 @@
+* change create and edit to false in the mapping views.
+* refresh token, authorization token and access token read only field.
+* add tax code in import and export process.
+
+

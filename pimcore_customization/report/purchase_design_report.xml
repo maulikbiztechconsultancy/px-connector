@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="vender_bill_custom_external_layout" >
+            <t t-if="o and 'company_id' in o">
+                <t t-set="company" t-value="o.company_id"/>
+            </t>
+            <t t-if="not o or not 'company_id' in o">
+                <t t-set="company" t-value="res_company"/>
+            </t>
+            <div class="custom_report" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">
+                <t t-out="0"/>
+            </div>
+        </template>
+        <template id="report_picking_vendor_bills">
+            <t t-call="web.external_layout">
+            	<t t-set="o" t-value="o.with_context(lang=o.partner_id.lang)"/>
+		        <t t-set="address">
+		            <div t-field="o.partner_id"
+		                 t-options='{"widget": "contact", "fields": ["address", "name", "phone", "vat"], "no_marker": True, "phone_icons": True}'/>
+		        </t>
+		        <t t-if="o.dest_address_id">
+		            <t t-set="information_block">
+		                <strong>Shipping address:</strong>
+		                <div t-if="o.dest_address_id">
+		                    <div t-field="o.dest_address_id"
+		                        t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True, "phone_icons": True}' name="purchase_shipping_address"/>
+		                </div>
+
+		            </t>
+		        </t>
+		        <div class="page">
+		            <div class="oe_structure"/>
+
+		            <div class="mt-4">
+		                <h2 t-if="o.state in ['draft', 'sent', 'to approve']">Request for Quotation #<span t-field="o.name"/></h2>
+		                <h2 t-if="o.state in ['purchase', 'done']">Purchase Order #<span t-field="o.name"/></h2>
+		                <h2 t-if="o.state == 'cancel'">Cancelled Purchase Order #<span t-field="o.name"/></h2>
+		            </div>
+
+		            <div id="informations" class="row mt-4 mb32">
+		                <div t-if="o.user_id" class="col-3 bm-2">
+		                    <strong>Buyer:</strong>
+		                    <p t-field="o.user_id" class="m-0"/>
+		                </div>
+		                <div t-if="o.partner_ref" class="col-3 bm-2">
+		                    <strong>Your Order Reference:</strong>
+		                    <p t-field="o.partner_ref" class="m-0"/>
+		                </div>
+		                <div t-if="o.state in ['purchase','done'] and o.date_approve" class="col-3 bm-2">
+		                    <strong>Order Date:</strong>
+		                    <p t-field="o.date_approve" class="m-0"/>
+		                </div>
+		                <div t-elif="o.date_order" class="col-3 bm-2">
+		                    <strong>Order Deadline:</strong>
+		                    <p t-field="o.date_order" class="m-0"/>
+		                </div>
+		            </div>
+
+		            <table class="table table-bordered">
+		                <thead style="display">
+		                    <tr>
+		                        <th name="th_date_req" class="text-center"><strong>Product</strong></th>
+		                        <th name="th_description"><strong>Description</strong></th>
+		                        <th name="th_price_unit" class="text-center"><strong>Printing</strong></th>
+		                        <th name="th_quantity" class="text-end"><strong>Qty</strong></th>
+		                    </tr>
+		                </thead>
+		                <tbody style="border-top:none;">
+		                    <t t-set="current_subtotal" t-value="0"/>
+		                    <t t-foreach="o.order_line" t-as="lines">
+		                    	<t t-set="line" t-value="lines.sale_line_id"/>
+		                        <t t-set="current_subtotal" t-value="current_subtotal + line.price_subtotal"/>
+
+		                        <tr t-att-class="'bg-200 fw-bold o_line_section' if line.display_type == 'line_section' else 'fst-italic o_line_note' if line.display_type == 'line_note' else ''">
+		                            <t t-if="not line.display_type">
+		                            	<t t-set="simple_product" t-value="request.env['sale.order.line'].search([('order_id', '=', line.order_id.id), ('parent_line_id', '=', line.parent_line_id), ('product_service_type', '=', 'finished'), ('display_type', '=', False)], limit=1)"/>
+		                                <td id="product" class="text-center">
+		                                    <span t-if="simple_product" t-esc="simple_product.product_id.name"/>
+		                                </td>
+		                                <td class="text-center">
+		                                    <span t-if="simple_product" t-esc="simple_product.product_id.product_template_attribute_value_ids._get_combination_name()"/>
+		                                </td>
+		                                <td class="text-center">
+		                                    <span t-field="lines.product_id.display_name"/>
+		                                </td>
+		                                <td class="text-end">
+		                                    <span t-if="simple_product" t-field="simple_product.product_qty"/>
+		                                    <span t-if="simple_product" t-field="simple_product.product_uom.name" groups="uom.group_uom"/>
+		                                    <span t-if="simple_product.product_packaging_id">
+		                                        (<span t-field="simple_product.product_packaging_qty" t-options='{"widget": "integer"}'/> <span t-field="simple_product.product_packaging_id"/>)
+		                                    </span>
+		                                </td>
+		                            </t>
+		                            <t t-if="line.display_type == 'line_section'">
+		                                <td colspan="99" id="section">
+		                                    <span t-field="line.name"/>
+		                                </td>
+		                                <t t-set="current_section" t-value="line"/>
+		                                <t t-set="current_subtotal" t-value="0"/>
+		                            </t>
+		                            <t t-if="line.display_type == 'line_note'">
+		                                <td colspan="99" id="note">
+		                                    <span t-field="line.name"/>
+		                                </td>
+		                            </t>
+		                        </tr>
+		                    </t>
+		                </tbody>
+		            </table>
+		            <div class="oe_structure"/>
+		        </div>
+            </t>
+        </template>
+        <template id="report_printing_artwork_design">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="pimcore_customization.report_picking_vendor_bills" t-lang="o.partner_id.lang"/>
+                </t>
+            </t>
+        </template>
+
+        <record id="artwork_printing_design" model="ir.actions.report">
+            <field name="name">Printing Design</field>
+            <field name="model">purchase.order</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">pimcore_customization.report_printing_artwork_design</field>
+            <field name="report_file">pimcore_customization.report_printing_artwork_design</field>
+            <field name="attachment"/>
+            <field name="binding_model_id" ref="purchase.model_purchase_order"/>
+            <field name="binding_type">report</field>
+        </record>
+    </data>
+</odoo>

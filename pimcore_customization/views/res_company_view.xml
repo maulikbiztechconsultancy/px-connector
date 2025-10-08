@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_company_form_inherit_purchase_validation" model="ir.ui.view">
+        <field name="name">res.company.form.purchase.validation</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='currency_id']" position="after">
+                <!-- <field name="quote_first_image" widget="image"/> -->
+                <field name="purchase_validation" 
+                       string="Purchase Validation" 
+                       options="{'no_create': True, 'no_reload': True}"/>
+                       <label for="carbon_co2"/>
+                       <div name="carbon_co2">
+                       <field name="carbon_co2"
+                            class="oe_inline"
+                            widget="monetary"
+                            options="{'currency_field': 'currency_id', 'field_digits': True}"/>
+                            <span name="uom_span"
+                            groups="uom.group_uom">
+                                 per
+                            <field
+                                name="uom_id"
+                                class="oe_inline" style="max-width:136px"
+                                options="{'no_create': True}"
+                            />
+                            </span>
+                        </div>
+                    <!-- <div name="carbon_co2">
+                        <field name="carbon_co2"
+                            class="oe_inline"
+                            widget="monetary"
+                            options="{'currency_field': 'currency_id', 'field_digits': True}"/>
+                        <span
+                            name="uom_span"
+                            groups="uom.group_uom"
+                            invisible="type == 'combo'"
+                        >
+                            per
+                            <field
+                                name="uom_id"
+                                class="oe_inline" style="max-width:136px"
+                                options="{'no_create': True}"
+                            />
+                        </span>
+                    </div> -->
+            </xpath>
+        </field>
+    </record>
+</odoo>

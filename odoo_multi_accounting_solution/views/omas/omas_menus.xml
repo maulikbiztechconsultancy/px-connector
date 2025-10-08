@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2015-Present Webkul Software Pvt. Ltd. (<https://webkul.com/>) -->
+<!-- See LICENSE file for full copyright and licensing details. -->
+<!-- "License URL : <https://store.webkul.com/license.html/>" -->
+<odoo>
+	<data>
+		<menuitem id="omas_parent_menu" name="Odoo Multi-Accounting" action="odoo_multi_accounting_solution.omas_dashboard_action" groups="odoo_multi_accounting_solution.group_omas_user" web_icon="odoo_multi_accounting_solution,static/description/icon.png" />
+		<menuitem id="omas_dashboard_menu" name="Dashboard" parent="odoo_multi_accounting_solution.omas_parent_menu" action="odoo_multi_accounting_solution.omas_dashboard_action" groups="odoo_multi_accounting_solution.group_omas_user" sequence="1" />
+		<menuitem id="omas_instance_menu" name="Instance" parent="odoo_multi_accounting_solution.omas_parent_menu" action="odoo_multi_accounting_solution.omas_action" groups="odoo_multi_accounting_solution.group_omas_user" sequence="2" />
+		<menuitem id='omas_feed_menu' name='Feeds' parent='odoo_multi_accounting_solution.omas_parent_menu' groups='base.group_no_one' sequence='3'/>
+		<menuitem id='omas_tax_feed_menu' parent='odoo_multi_accounting_solution.omas_feed_menu' name='Tax Feeds' groups='base.group_no_one' action='odoo_multi_accounting_solution.omas_tax_feed_action' sequence="1"/>
+		<menuitem id='omas_account_feed_menu' parent='odoo_multi_accounting_solution.omas_feed_menu' name='Account Feeds' groups='base.group_no_one' action='odoo_multi_accounting_solution.omas_account_feed_action' sequence="2"/>
+		<menuitem id='omas_customer_feed_menu' parent='odoo_multi_accounting_solution.omas_feed_menu' name='Customer Feeds' groups='base.group_no_one' action='odoo_multi_accounting_solution.omas_customer_feed_action' sequence="3"/>
+		<menuitem id='omas_product_feed_menu' parent='odoo_multi_accounting_solution.omas_feed_menu' name='Product Feeds' groups='base.group_no_one' action='odoo_multi_accounting_solution.omas_product_feed_action' sequence="4"/>
+		<menuitem id='omas_order_feed_menu' parent='odoo_multi_accounting_solution.omas_feed_menu' name='Order Feeds' groups='base.group_no_one' action='odoo_multi_accounting_solution.omas_order_feed_action' sequence="5"/>
+		<menuitem id='omas_purchase_order_feed_menu' parent='odoo_multi_accounting_solution.omas_feed_menu' name='Purchase Order Feeds' groups='base.group_no_one' action='odoo_multi_accounting_solution.omas_purchase_order_feed_action' sequence="6"/>
+		<menuitem id='omas_invoice_feed_menu' parent='odoo_multi_accounting_solution.omas_feed_menu' name='Invoice Feeds' groups='base.group_no_one' action='odoo_multi_accounting_solution.omas_invoice_feed_action' sequence="7"/>
+		<menuitem id='omas_payment_feed_menu' parent='odoo_multi_accounting_solution.omas_feed_menu' name='Payment Feeds' groups='base.group_no_one' action='odoo_multi_accounting_solution.omas_payment_feed_action' sequence="8"/>
+
+		<menuitem id="omas_mapping_menu" name="Mappings" parent="odoo_multi_accounting_solution.omas_parent_menu" groups="odoo_multi_accounting_solution.group_omas_user" sequence='4' />
+		<menuitem id="omas_tax_menu" name="Tax Mappings" action="odoo_multi_accounting_solution.omas_tax_mapping_action" parent="odoo_multi_accounting_solution.omas_mapping_menu" groups="odoo_multi_accounting_solution.group_omas_user" sequence="1"/>
+		<menuitem id="omas_account_mapping_menu" name="Account Mappings" action="odoo_multi_accounting_solution.omas_account_mapping_action" parent="odoo_multi_accounting_solution.omas_mapping_menu" groups="odoo_multi_accounting_solution.group_omas_user" sequence="2"/>
+		<menuitem id="omas_payment_method_mapping_menu" name="Payment Method Mappings" action="odoo_multi_accounting_solution.omas_payment_method_mapping_action" parent="odoo_multi_accounting_solution.omas_mapping_menu" groups="odoo_multi_accounting_solution.group_omas_user" sequence="3"/>
+		<menuitem id="omas_customer_mapping_menu" name="Customer Mappings" action="odoo_multi_accounting_solution.omas_customer_mapping_action" parent="odoo_multi_accounting_solution.omas_mapping_menu" groups="odoo_multi_accounting_solution.group_omas_user" sequence="4"/>
+		<menuitem id="omas_template_mapping_menu" name="Template Mappings" action="odoo_multi_accounting_solution.omas_template_mapping_action" parent="odoo_multi_accounting_solution.omas_mapping_menu" groups="odoo_multi_accounting_solution.group_omas_user" sequence="5"/>
+		<menuitem id="omas_product_mapping_menu" name="Product Mappings" action="odoo_multi_accounting_solution.omas_product_mapping_action" parent="odoo_multi_accounting_solution.omas_mapping_menu" groups="odoo_multi_accounting_solution.group_omas_user" sequence="6"/>
+
+		<!-- Sale Section -->
+		<menuitem id="menu_customer_data_mappings" name="Sale Mappings" parent="odoo_multi_accounting_solution.omas_mapping_menu" groups="odoo_multi_accounting_solution.group_omas_user" sequence="7"/>
+		<menuitem id="omas_order_mapping_menu" name="Sale Order" action="odoo_multi_accounting_solution.omas_order_mapping_action" parent="odoo_multi_accounting_solution.menu_customer_data_mappings" groups="odoo_multi_accounting_solution.group_omas_user" />
+		<menuitem id="omas_invoice_mapping_menu" name="Customer Invoices" action="odoo_multi_accounting_solution.omas_invoice_mapping_action" parent="odoo_multi_accounting_solution.menu_customer_data_mappings" groups="odoo_multi_accounting_solution.group_omas_user" />
+		<menuitem id="menu_action_move_out_refund" name="Credit Notes" action="action_account_move_out_refund" groups="odoo_multi_accounting_solution.group_omas_user" parent="odoo_multi_accounting_solution.menu_customer_data_mappings"/>
+		
+		<!-- Purchase Section -->
+		<menuitem id="menu_vendor_data_mappings" name="Purchase Mappings" parent="odoo_multi_accounting_solution.omas_mapping_menu" groups="odoo_multi_accounting_solution.group_omas_user" sequence="8"/>
+		<menuitem id="omas_purchase_order_mapping_menu" name="Purchase Order" action="odoo_multi_accounting_solution.omas_purchase_order_mapping_action" parent="odoo_multi_accounting_solution.menu_vendor_data_mappings" groups="odoo_multi_accounting_solution.group_omas_user" />
+		<menuitem id="menu_action_move_in_invoice" name="Vendor Bills" action="action_account_move_in_invoice" groups="odoo_multi_accounting_solution.group_omas_user" parent="odoo_multi_accounting_solution.menu_vendor_data_mappings"/>
+		<menuitem id="menu_action_move_in_refund" name="Refunds" action="action_account_move_in_refund" groups="odoo_multi_accounting_solution.group_omas_user" parent="odoo_multi_accounting_solution.menu_vendor_data_mappings"/>
+
+		<menuitem id="omas_payment_mapping_menu" name="Payment Mappings" action="odoo_multi_accounting_solution.omas_payment_mapping_action" parent="odoo_multi_accounting_solution.omas_mapping_menu" groups="odoo_multi_accounting_solution.group_omas_user" sequence="9"/>
+		<menuitem id="omas_category_mapping_menu" name="Category Mappings" action="odoo_multi_accounting_solution.omas_category_mapping_action" parent="odoo_multi_accounting_solution.omas_mapping_menu" groups="odoo_multi_accounting_solution.group_omas_user" sequence="10"/>
+		<menuitem id="omas_payment_term_mapping_menu" name="Payment Term Mappings" action="odoo_multi_accounting_solution.omas_payment_term_mapping_action" parent="odoo_multi_accounting_solution.omas_mapping_menu" groups="odoo_multi_accounting_solution.group_omas_user" sequence="11"/>
+		<menuitem id="omas_shipping_menu" name="Shipping Mappings" action="odoo_multi_accounting_solution.omas_shipping_mapping_action" parent="odoo_multi_accounting_solution.omas_mapping_menu" groups="odoo_multi_accounting_solution.group_omas_user" sequence="12"/>
+	</data>
+</odoo>

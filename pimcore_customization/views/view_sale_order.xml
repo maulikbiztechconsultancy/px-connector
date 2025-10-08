@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="sale_order_form_view_inherit" model="ir.ui.view">
+            <field name="name">sale.order.form.view.inherit</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <!-- <field name="product_template_id" position="attributes">
+                    <attribute name="domain">[('sale_ok', '=', True),('product_service_type', 'in', ['raw_product', 'finished'])]</attribute>
+                </field> -->
+                <xpath expr="//field[@name='payment_term_id']" position="after">
+                    <field name="delivered_to" widget="radio"/>
+                </xpath>
+                <xpath expr="//field[@name='sale_order_template_id']" position="after">
+                    <field name="count_line" invisible="1"/>
+                    <field name="is_artwork_proofing_setting" invisible="1"/>
+                    <field name="artwork_approval" invisible="1"/>
+                    <field name="count_for_approved_cycle_complete" invisible="1"/>
+                    <field name="is_artwork_proofing_amount_setting" invisible="1"/>
+                    <!-- <field name="amount_total" invisible="1"/> -->
+                </xpath>
+                <xpath expr="//page[@name='order_lines']//list//field[@name='product_template_id']" position="before">
+                    <field name = "image_128" widget="image" class="oe_avatar w-auto float-start" readonly="1"/>
+                </xpath>
+                <xpath expr="//page[@name='order_lines']//list//field[@name='name']" position="after">
+                    <button name="action_open_wizard" type="object" icon="fa-cloud-upload" class="oe_edit_only" title="Upload Printing Image" invisible="product_service_type != 'printing'"/>
+                    <field name="parent_line_id" column_invisible="1"/>
+                    <field name="sequence" column_invisible="1"/>
+                    <field name="product_service_type" column_invisible="1"/>
+                    <field name="sequence" column_invisible="1"/>
+                    <!-- <field name="printing_thumbnail" widget="image" options="{'size': [30, 30]}" invisible="product_service_type != 'printing'" readonly="1"/> -->
+                    <field name="printing_thumbnail_name" column_invisible="1"/>
+                    <!-- <widget name="custom_printing_image_widget"/> -->
+                </xpath>
+                <!-- <xpath expr="//page[@name='order_lines']//list//field[@name='product_template_id']" position="after">
+                    <button name="action_open_wizard" type="object" icon="fa-cloud-upload" class="oe_edit_only" title="Open Work Order" invisible="product_service_type != 'printing'"/>
+                </xpath> -->
+                <xpath expr="//page[@name='order_lines']//list//field[@name='name']" position="after">
+                    <field name="show_cpq" column_invisible="1"/>
+                </xpath>
+                <xpath expr="//control/button[@name='action_add_from_catalog']" position="after">
+                    <create name="add_cpq" string="CPQ" context="{'default_show_cpq':True}"/>
+                </xpath>
+
+                <xpath expr="//button[@name='action_confirm']" position="after">
+                    <button name="action_send_proofing" id="action_approved" string="Send For Proofing" class="btn-primary" type="object" invisible="artwork_approval &lt;=  count_for_approved_cycle_complete or state in ['draft','sale','approved','cancel'] or not is_artwork_proofing_setting or is_artwork_proofing_amount_setting &gt; amount_total"/>
+                    <!-- <button name="action_send_proofing" id="action_approved" string="Send For Proofing" class="btn-primary" type="object" invisible="artwork_approval &lt;=  count_for_approved_cycle_complete or state in ['draft','sale','approved','cancel'] or not is_artwork_proofing_setting or is_artwork_proofing_amount_setting &gt; amount_total"/> -->
+                </xpath>
+
+                <xpath expr="//button[@name='action_confirm']" position="attributes">
+                    <attribute name="invisible">((state not in ['approved','sent'] and is_artwork_proofing_setting) or (state != 'sent' and not is_artwork_proofing_setting))</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_cancel']" position="attributes">
+                    <attribute name="invisible">(state not in ['draft', 'sent', 'sale', 'approved'] or not id or locked)</attribute>
+                </xpath>
+                <xpath expr="//page[@name='order_lines']//list//field[@name='product_id']" position="attributes">
+                    <attribute name="column_invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='order_line']" position="attributes">
+                    <attribute name="readonly">state == 'sale'</attribute>
+                </xpath>
+                <xpath expr="//page[@name='order_lines']//list//field[@name='product_uom']" position="after">
+                    <field name="carbon_co2"/>
+                    <field name="carbon_product_uom"/>
+                    <field name="co2_price"/>
+                    <field name="offer_1"  optional="show"/>
+                    <field name="offer_price_1"  optional="show"/>
+                    <field name="offer_1_margin_price" optional="show"/>
+                    <field name="offer_2"  optional="show"/>
+                    <field name="offer_price_2"  optional="show"/>
+                    <field name="offer_2_margin_price" optional="show"/>
+ss                </xpath>
+                <!-- <xpath expr="//field[@name='amount_total']" position="after">
+                    <field name="price_co2_total"/>
+                </xpath> -->
+                <xpath expr="//group[@name='sale_total']" position="inside">
+                <field name="price_co2_total"/>
+            </xpath>
+            </field>
+        </record>
+
+        <record id="sale_order_line_artwork_info_form_config" model="ir.ui.view">
+            <field name="name">sale.order.line.form.info</field>
+            <field name="model">sale.order.line</field>
+            <field name="arch" type="xml">
+                <form string="Printing Information">
+                    <sheet>
+                        <field name="printing_thumbnail" widget="image" class="oe_avatar" readonly="1"/>
+                        <group name="artwork_information">
+                            <group name="artwork_details">
+                                <field name="product_id" readonly="1"/>
+                                <field name="printing_thumbnail" filename="printing_thumbnail_name"/>
+                                <field name="printing_thumbnail_name" invisible="1"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="sale_line_info_view_on_wiz_form">
+            <field name="name">Printing Information</field>
+            <field name="res_model">sale.order.line</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="view_id" ref="pimcore_customization.sale_order_line_artwork_info_form_config"/>
+        </record>
+    </data>
+</odoo>

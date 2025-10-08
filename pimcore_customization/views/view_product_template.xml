@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="product_template_only_form_view_inherit" model="ir.ui.view">
+            <field name="name">product.template.form.view.inherit</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='type']" position="after">
+                    <field name="product_service_type"/>
+                    <label for="carbon_co2"/>
+                    <div name="carbon_co2">
+                        <field name="carbon_co2"
+                            class="oe_inline"
+                            widget="monetary"
+                            options="{'currency_field': 'currency_id', 'field_digits': True}"/>
+                        <span
+                            name="uom_span"
+                            groups="uom.group_uom"
+                            invisible="type == 'combo'"
+                        >
+                            per
+                            <field
+                                name="uom_id_co2"
+                                class="oe_inline" style="max-width:136px"
+                                options="{'no_create': True}"
+                            />
+                        </span>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+        <record id="product_normal_form_view_inherit" model="ir.ui.view">
+            <field name="name">product.normal.form.view.inherit</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='type']" position="after">
+                    <field name="product_service_type"/>
+                    <field name="display_name_with_variant" invisible="1"/>
+                    <label for="carbon_co2"/>
+                    <div name="carbon_co2">
+                        <field name="carbon_co2"
+                            class="oe_inline"
+                            widget="monetary"
+                            options="{'currency_field': 'currency_id', 'field_digits': True}"/>
+                        <span
+                            name="uom_span"
+                            groups="uom.group_uom"
+                            invisible="type == 'combo'"
+                        >
+                            per
+                            <field
+                                name="uom_id_co2"
+                                class="oe_inline" style="max-width:136px"
+                                options="{'no_create': True}"
+                            />
+                        </span>
+                    </div>
+                </xpath>
+                <xpath expr="//notebook" position="inside">
+                        <page name="printing_info" string="Printing Info"  invisible="product_service_type != 'finished'" groups="base.group_user">
+                            <field name="related_printing_service_products">
+                                <list create="false">
+                                    <field name="name" optional="show"/>
+                                    <field name="default_code" optional="show"/>
+                                    <field name="product_tag_ids" optional="hide"/>
+                                    <field name="list_price" optional="show"/>
+                                    <field name="standard_price" optional="hide"/>
+                                    <field name="qty_available" optional="hide"/>
+                                    <field name="virtual_available" optional="hide"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page name="printing_service" string="Supplier Product"  invisible="product_service_type != 'printing'" groups="base.group_user">
+                            <field name="releted_supplier_products">
+                                <list create="false">
+                                    <field name="name" optional="show"/>
+                                    <field name="default_code" optional="show"/>
+                                    <field name="product_tag_ids" optional="hide"/>
+                                    <field name="list_price" optional="show"/>
+                                    <field name="standard_price" optional="hide"/>
+                                    <field name="qty_available" optional="hide"/>
+                                    <field name="virtual_available" optional="hide"/>
+                                </list>
+                            </field>
+                        </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="product_template_tree_view_inherit" model="ir.ui.view">
+            <field name="name">product.template.tree.inherit</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_tree_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="product_service_type" optional="hide"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="action_product_list" model="ir.actions.act_window">
+            <field name="name">Products</field>
+            <field name="res_model">product.product</field>
+            <field name="view_mode">list,form</field>
+            <field name="context">{}</field>
+        </record>
+
+        <record id="action_inventory" model="ir.actions.act_window">
+            <field name="name">Products</field>
+            <field name="res_model">product.template</field>
+            <field name="view_mode">list,form</field>
+            <field name="context">{}</field>
+        </record>
+
+        <record id="action_all_products" model="ir.actions.act_window">
+            <field name="name">All Products</field>
+            <field name="res_model">product.template</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+        <record id="action_finished_products" model="ir.actions.act_window">
+            <field name="name">Finished Products</field>
+            <field name="res_model">product.template</field>
+            <field name="view_mode">list,form</field>
+            <field name="context">{'search_default_product_finished': 1,"default_product_service_type": 'finished'}</field>
+            <field name="domain">[('product_service_type', 'in', ['finished', 'raw_product', 'printing','delivery'])]</field>
+        </record>
+
+        <!-- Action for Printing Products -->
+        <record id="action_printing_products" model="ir.actions.act_window">
+            <field name="name">Printing Products</field>
+            <field name="res_model">product.template</field>
+            <field name="view_mode">list,form</field>
+            <field name="context">{'search_default_product_printing': 1,"default_product_service_type": 'printing'}</field>
+            <field name="domain">[('product_service_type', 'in', ['finished', 'raw_product', 'printing','delivery'])]</field>
+        </record>
+
+        <record id="action_delivery_products" model="ir.actions.act_window">
+            <field name="name">Delivery Products</field>
+            <field name="res_model">product.template</field>
+            <field name="view_mode">list,form</field>
+            <field name="context">{'search_default_product_delivery': 1,"default_product_service_type": 'delivery'}</field>
+            <field name="domain">[('product_service_type', 'in', ['finished', 'raw_product', 'printing','delivery'])]</field>
+        </record>
+
+        <record id="action_raw_products" model="ir.actions.act_window">
+            <field name="name">Raw Products</field>
+            <field name="res_model">product.template</field>
+            <field name="view_mode">list,form</field>
+            <field name="context">{'search_default_product_raw': 1,"default_product_service_type": 'raw_product'}</field>
+            <field name="domain">[('product_service_type', 'in', ['finished', 'raw_product', 'printing','delivery'])]</field>
+        </record>
+
+        <record id="action_sale_orders" model="ir.actions.act_window">
+            <field name="name">Sales Orders</field>
+            <field name="res_model">sale.order.line</field>
+            <field name="view_mode">list</field>
+            <field name="domain">[('display_type', '!=', 'line_section'),('order_id.state', '=', 'sale')]</field>
+            <field name="view_id" ref="view_sale_order_line_custom_tree"/>
+            <field name="context">
+            {
+                'group_by': ['order_id','cpq_bunch']
+            }
+            </field>
+        </record>
+
+    </data>
+</odoo>

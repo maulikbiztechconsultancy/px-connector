@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2015-Present Webkul Software Pvt. Ltd. (<https://webkul.com/>) -->
+<!-- See LICENSE file for full copyright and licensing details. -->
+<!-- "License URL : <https://store.webkul.com/license.html/>" -->
+<odoo>
+	<data>
+		<record id="omas_manual_export_operation_view_form" model="ir.ui.view">
+			<field name="name">omas.manual.export.form</field>
+			<field name="model">omas.manual.export</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Export">
+					<group col='6'>
+						<field
+							name="instance_id"
+							required='1'
+							options="{'no_create' : True}"
+						/>
+						<field name="instance" groups="base.group_no_one"/>
+					</group>
+					<footer>
+						<button string="Synchronize" type="object" name="manual_export_button" class="oe_highlight btn btn-success"/>
+						<button string="Cancel" name="cancel" special="cancel" class='oe_highlight btn btn-danger' />
+					</footer>
+				</form>
+			</field>
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="xd_vendor_job_queue" model="vendor.queue.job">
+            <field name="name">xd</field>
+        </record>
+
+        <record id="xd_vendor_configuration" model="pimore.vender.config">
+            <field name="name">xd</field>
+            <field name="endpoint_url">https://pimcore.printxpand.net/pimcore-graphql-webservices/XdSupplier</field>
+            <field name="general_api_key">393c239476afaf3d43cb8302bf0beb28</field>
+            <field name="api_key">2320e12eaf4ab8e6fe0a9ba0fdcc6020</field>
+            <field name="vendor_queue_job_id" ref="xd_vendor_job_queue"/>
+        </record>
+    </data>
+</odoo>
