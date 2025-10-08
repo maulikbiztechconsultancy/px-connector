@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2015-Present Webkul Software Pvt. Ltd. (<https://webkul.com/>) -->
+<!-- See LICENSE file for full copyright and licensing details. -->
+<!-- "License URL : <https://store.webkul.com/license.html/>" -->
+<odoo>
+	<data>       
+        <!-- Manual Export -->
+		<record id="manual_export_product_product_action" model="ir.actions.act_window">
+			<field name="name">Multi Accounting - Export Product</field>
+			<field name="res_model">omas.manual.export</field>
+			<field name="binding_model_id" ref="sale.model_product_template"/>
+			<field name="view_mode">form</field>
+			<field name="target">new</field>
+		</record>
+		<record id="manual_export_res_partner_action" model="ir.actions.act_window">
+			<field name="name">Multi Accounting - Export Partner</field>
+			<field name="res_model">omas.manual.export</field>
+			<field name="binding_model_id" ref="sale.model_res_partner"/>
+			<field name="view_mode">form</field>
+			<field name="target">new</field>
+		</record>
+		<record id="manual_export_account_move_action" model="ir.actions.act_window">
+			<field name="name">Multi Accounting - Export Invoice</field>
+			<field name="res_model">omas.manual.export</field>
+			<field name="binding_model_id" ref="account.model_account_move"/>
+			<field name="view_mode">form</field>
+			<field name="target">new</field>
+		</record>
+		<record id="manual_export_sale_order_action" model="ir.actions.act_window">
+			<field name="name">Multi Accounting - Export Order</field>
+			<field name="res_model">omas.manual.export</field>
+			<field name="binding_model_id" ref="sale.model_sale_order"/>
+			<field name="view_mode">form</field>
+			<field name="target">new</field>
+		</record>
+		<record id="manual_account_account_order_action" model="ir.actions.act_window">
+			<field name="name">Multi Accounting - Export Account</field>
+			<field name="res_model">omas.manual.export</field>
+			<field name="binding_model_id" ref="account.model_account_account"/>
+			<field name="view_mode">form</field>
+			<field name="target">new</field>
+		</record>
+		<record id="manual_account_account_payment_action" model="ir.actions.act_window">
+			<field name="name">Multi Accounting - Export Payment</field>
+			<field name="res_model">omas.manual.export</field>
+			<field name="binding_model_id" ref="account.model_account_payment"/>
+			<field name="view_mode">form</field>
+			<field name="target">new</field>
+		</record>
+		<record id="manual_export_purchase_order_action" model="ir.actions.act_window">
+			<field name="name">Multi Accounting - Export Purchase Order</field>
+			<field name="res_model">omas.manual.export</field>
+			<field name="binding_model_id" ref="purchase.model_purchase_order"/>
+			<field name="view_mode">form</field>
+			<field name="target">new</field>
+		</record>
+    </data>
+</odoo>

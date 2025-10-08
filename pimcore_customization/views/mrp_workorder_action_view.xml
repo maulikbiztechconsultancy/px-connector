@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="action_set_workorder" model="ir.actions.server">
+            <field name="name">Set Workcenter</field>
+            <field name="model_id" ref="mrp.model_mrp_workorder"/>
+            <field name="state">code</field>
+            <field name="binding_model_id" ref="mrp.model_mrp_workorder"/>
+            <field name="binding_view_types">list</field>
+            <field name="code">
+                action = records.action_open_workcenter()
+            </field>
+        </record>
+        <record id="view_mrp_wrokorder_form_inherit" model="ir.ui.view">
+            <field name="name">mrp.workorder.form.inherit</field>
+            <field name="model">mrp.workorder</field>
+            <field name="inherit_id" ref="mrp.mrp_production_workorder_form_view_inherit"/>
+            <field name="arch" type="xml">
+                <field name="workcenter_id" position="after">
+                    <field name="resource_id"/>
+                </field>
+            </field>
+        </record>
+        <record id="mrp_production_workorder_tree_editable_view_inherit" model="ir.ui.view">
+            <field name="name">mrp.production.work.order.tree.editable.custom</field>
+            <field name="model">mrp.workorder</field>
+            <field name="inherit_id" ref="mrp.mrp_production_workorder_tree_editable_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='workcenter_id']" position="after">
+                    <field name="resource_id"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

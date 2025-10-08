@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="artwork_approval_template" inherit_id="portal.portal_sidebar" name="Artwork Approval" primary="True">
+            <xpath expr="//div[hasclass('o_portal_sidebar')]" position="inside">
+                <div class="row mt16 o_portal_sale_sidebar">
+                    <div class="col-12 col-lg justify-content-end" id="quote_content" t-if="sale_order">
+                        <div class="card pb-5">
+                            <t t-if="token_varified == True or send_approval_mail == True">
+                                <t t-if="send_approval_mail == False">
+                                    <div class="pb-2 pt-3 card-header bg-white" id="introduction">
+                                        <h2 class="my-0" style="color:#714B67;">
+                                            Artwork approval for  
+                                            <em t-esc="sale_order.name"/>
+                                        </h2>
+                                    </div>
+                                    <div>
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <td colspan="2">Modification : </td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <t t-set="service_lines" t-value="[]"/>
+                                                <t t-set="line_counter" t-value="1"/>
+                                                <t t-foreach="sale_order.send_for_approval()" t-as="parent_group">
+                                                    <tr>
+                                                        <td><t t-esc="line_counter"/></td>
+                                                        <td><img t-att-src="'/web/image/sale.order.line/%s/printing_thumbnail' % parent_group['line_id']" style="max-width: 100px; max-height: 100px;" /></td>
+                                                        <td id="design_Status" t-att-data-line-id="parent_group['line_id']">
+                                                            <b><t t-esc="parent_group['main_product']"/></b><br/>
+                                                            Printing : <t t-esc="parent_group['printing_product']"/><br/>
+                                                            <t t-if="sale_order.count_for_approved_cycle_complete == sale_order.artwork_approval">
+                                                                <select id="approval_status" t-att-data-line-id="parent_group['line_id']" name="approval_status">
+                                                                    <option value=""></option>
+                                                                    <option value="accept">Approve</option>
+                                                                </select><br/>
+                                                                <span class="validation-message"></span>
+                                                                <br/>
+                                                            </t>
+                                                            <t t-else="">
+                                                                <label for="data_approved">Select :  </label>
+                                                                    <select id="approval_status" t-att-data-line-id="parent_group['line_id']" name="approval_status">
+                                                                        <option value=""></option>
+                                                                        <option value="accept">Approve</option>
+                                                                        <option value="accept_with_change">Approve with Comments</option>
+                                                                        <option value="reject">Resend with Comments</option>
+                                                                    </select><br/>
+                                                                        <span class="validation-message"></span>
+                                                                <br/>
+                                                                Comments : <textarea class="form-control" name="decline_message" placeholder="Your feedback..." required="" rows="1"/>
+                                                            </t>
+                                                        </td>
+                                                    </tr>
+                                                    <t t-set="line_counter" t-value="line_counter + 1"/>
+                                                </t>
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <td colspan="2"/>
+                                                    <td>
+                                                        <div class="col-sm-auto mt8">
+                                                            <div class="col-12 col-sm-auto mt8">
+                                                                <input type="checkbox" t-att-data-order-id="sale_order.id" name="All Product Approved" value="all_product_approved">All Product Approved</input>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2"></td>
+                                                    <td class="text-center">
+                                                        <div class="col-sm-auto mt8">
+                                                            <div class="col-12 col-sm-auto mt8">
+                                                                <input name="send_approval_mail" type="hidden" value="True"/>
+                                                                <button class="btn btn-primary submit-artwork" t-att-data-order-id="sale_order.id" data-submit-type="final_approved">Submit</button>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </t>
+                                <t t-if="send_approval_mail == True">
+                                    <section class="mt32 approval-message" id="details" style="page-break-inside: auto;">
+                                    <h2 style="margin-left: 10px;">Thank you for your order.
+                                        <br/></h2>
+                                       <h4 style="margin-left: 10px;">Order <t t-esc="sale_order.name"/></h4>
+                                    </section>
+                                </t>
+                            </t>
+                            <t t-else="">
+                                <div class="card-body">
+                                    <section class="mt32 approval-message">
+                                        <h2>This URL is Expired!</h2>
+                                    </section>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>

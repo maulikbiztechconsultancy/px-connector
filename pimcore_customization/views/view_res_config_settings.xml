@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    	<record id="res_config_settings_view_form" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form.printxpand</field>
+            <field name="model">res.config.settings</field>
+            <field name="priority" eval="10"/>
+            <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form" position="inside">
+                    <app data-string="Printxpand" string="Printxpand" name="pimcore_customization">
+                        <block title="Artwork Approval Sales" name="artwork_approval_sales">
+                            <setting help="Define Artwork for Sales">
+                                <field name="is_artwork_proofing"/>
+                            </setting>
+                            <setting help="Set Artwork plans for Sales" invisible="not is_artwork_proofing">
+                                <field name="artwork_approval"/>
+                            </setting>
+                            <setting help="Set Artwork amount for Sales" invisible="not is_artwork_proofing">
+                                <field name="approval_amount"/>
+                            </setting>
+                        </block>
+                    </app>
+                </xpath>
+            </field>
+        </record>
+        <record id="action_printxpand_config_settings" model="ir.actions.act_window">
+            <field name="name">Settings</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.config.settings</field>
+            <field name="view_id" ref="res_config_settings_view_form"/>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+            <field name="context">{'module' : 'pimcore_customization'}</field>
+        </record>
+    </data>
+</odoo>

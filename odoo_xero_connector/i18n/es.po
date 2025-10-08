@@ -1,0 +1,45 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* odoo_xero_connector
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-16 13:20+0000\n"
+"PO-Revision-Date: 2024-05-16 13:20+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: odoo_xero_connector
+#: model:ir.model,name:odoo_xero_connector.model_account_move
+msgid "Journal Entry"
+msgstr "Asiento contable"
+
+#. module: odoo_xero_connector
+#: model:ir.model,name:odoo_xero_connector.model_omas
+msgid "Odoo Multi Accounting Solution"
+msgstr "Solución de contabilidad múlti de Odoo"
+
+#. module: odoo_xero_connector
+#: model:ir.model,name:odoo_xero_connector.model_purchase_order
+msgid "Purchase Order"
+msgstr "Pedido de compra"
+
+#. module: odoo_xero_connector
+#: model:ir.model,name:odoo_xero_connector.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de venta"
+
+#. module: odoo_xero_connector
+#: model:ir.model.fields,field_description:odoo_xero_connector.field_account_bank_statement_line__xero_doc_number
+#: model:ir.model.fields,field_description:odoo_xero_connector.field_account_move__xero_doc_number
+#: model:ir.model.fields,field_description:odoo_xero_connector.field_account_payment__xero_doc_number
+#: model:ir.model.fields,field_description:odoo_xero_connector.field_purchase_order__xero_doc_number
+#: model:ir.model.fields,field_description:odoo_xero_connector.field_sale_order__xero_doc_number
+msgid "Xero Doc Number"
+msgstr "Número de documento Xero"

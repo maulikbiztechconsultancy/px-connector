@@ -1,0 +1,27 @@
+<odoo>
+
+     <record id="view_resource_calendar" model="ir.ui.view">
+        <field name="name">mrp.workorder.resource.calendar</field>
+        <field name="model">mrp.workorder</field>
+        <field name="arch" type="xml">
+            <calendar date_start="date_start" date_stop="date_finished"
+                      string="Resource Calendar" color="resource_id" event_open_popup="true" quick_create="0" mode="week">
+                <field name="workcenter_id" filters="1"/>
+                <field name="resource_id" avatar_field="avatar_128"/>
+            </calendar>
+        </field>
+    </record>
+
+    <record id="action_work_center" model="ir.actions.act_window">
+        <field name="name">Work Orders</field>
+        <field name="res_model">mrp.workorder</field>
+        <field name="view_mode">calendar</field>
+    </record>
+
+    <record id="action_resource" model="ir.actions.act_window">
+        <field name="name">Resource</field>
+        <field name="res_model">mrp.workorder</field>
+        <field name="view_mode">calendar</field>
+        <field name="view_id" ref="view_resource_calendar"/>
+    </record>
+</odoo>

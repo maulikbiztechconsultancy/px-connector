@@ -1,0 +1,3413 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* odoo_multi_accounting_solution
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-07 07:17+0000\n"
+"PO-Revision-Date: 2024-05-07 07:17+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__use_customer_cron
+msgid " Import Customer Cron"
+msgstr "استيراد  الزبائن cron"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__use_invoice_cron
+msgid " Import Invoice Cron"
+msgstr "استيراد فاتورة cron"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__use_order_cron
+msgid " Import Order Cron"
+msgstr " طلب الاستيراد cron "
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__use_payment_cron
+msgid " Import Payment Cron"
+msgstr "استيراد الدفع cron"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__use_product_cron
+msgid " Import Product Cron"
+msgstr "استيراد المنتج cron"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__use_purchase_order_cron
+msgid " Import Purchase Order Cron"
+msgstr "استيراد طلب الشراء كرون"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.module.category,name:odoo_multi_accounting_solution.module_odoo_multi_accounting_solution_category
+msgid " Odoo Multi-Accounting Solution "
+msgstr " حل أودو للمحاسبة المتعددة "
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas__api_limit__10
+msgid "10"
+msgstr "عشرة"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas__api_limit__100
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas__page_limit__100
+msgid "100"
+msgstr "مائة"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas__page_limit__1000
+msgid "1000"
+msgstr "ألف"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas__api_limit__20
+msgid "20"
+msgstr "عشرون"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas__page_limit__200
+msgid "200"
+msgstr "مائتان"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas__api_limit__50
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas__page_limit__50
+msgid "50"
+msgstr "خمسون"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas__page_limit__500
+msgid "500"
+msgstr "خمسة مائة"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid ""
+"<b>IMPORTANT</b>: Click on the <b>Fetch Organizations</b> button to fetch "
+"the organizations from the Connected Instance."
+msgstr ""
+"<b>هام</b>: انقر على زر <b>جلب المنظمات</b> للجلب"
+"المنظمات من المثيل المتصل."
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid ""
+"<b>IMPORTANT</b>: The Redirect URI must match for both Odoo and the "
+"Accounting Instance upon creation. Kindly append <b>/omas</b> after the Odoo"
+" website URL."
+msgstr ""
+"<b>هام</b>: يجب أن يتطابق عنوان URI لإعادة التوجيه لكل من Odoo و"
+"مثيل المحاسبة عند الإنشاء. يرجى إلحاق <b>/omas</b> بعد Odoo"
+"رابط الموقع."
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid ""
+"<br/>\n"
+"                                                    <span>Export</span>\n"
+"                                                    <span>\n"
+"                                                        <i class=\"fa fa-fw fa-cloud-upload\"/>\n"
+"                                                    </span>"
+msgstr ""
+"<br/>\n"
+"                                                   <span>تصدير</span>\n"
+"                                                   <span>\n"
+"                                                       <i class=\"fa fa-fw fa-cloud-upload\"/>\n"
+"                                                   </span>"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid ""
+"<br/>\n"
+"                                                    <span>Import</span>\n"
+"                                                    <span>\n"
+"                                                        <i class=\"fa fa-fw fa-cloud-download\"/>\n"
+"                                                    </span>"
+msgstr ""
+"<br/>\n"
+"                                                   <span>استيراد</span>\n"
+"                                                   <span>\n"
+"                                                       <i class=\"fa fa-fw fa-cloud-download\"/>\n"
+"                                                   </span>"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_account_mapping_form
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_tax_mapping_form
+msgid ""
+"<span class=\"o_stat_text\" invisible=\"active\">\n"
+"\t\t\t\t\t\t\t\t\t\tInActive\n"
+"\t\t\t\t\t\t\t\t\t</span>\n"
+"\t\t\t\t\t\t\t\t\t<span class=\"text-success\" invisible=\"not active\">\n"
+"\t\t\t\t\t\t\t\t\t\tActive\n"
+"\t\t\t\t\t\t\t\t\t</span>"
+msgstr ""
+"<span class=\"o_stat_text\" غير مرئي=\"نشط\">\n"
+"\t\t\t\t\t\t\t\t\t\tغير نشط\n"
+"\t\t\t\t\t\t\t\t\t</span>\n"
+"\t\t\t\t\t\t\t\t\t<span class=\"text-success\" غير مرئي=\"غير نشط\">\n"
+"\t\t\t\t\t\t\t\t\t\tنشط\n"
+"\t\t\t\t\t\t\t\t\t</span>"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid ""
+"<span class=\"o_stat_text\">Debug</span>\n"
+"                                    <span class=\"o_warning_text\">Disable</span>"
+msgstr ""
+"<span class=\"o_stat_text\">تصحيح أخطاء</span>\n"
+"                                    <span class=\"o_warning_text\">تعطيل</span>"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid ""
+"<span class=\"o_stat_text\">Debug</span>\n"
+"                                    <span class=\"text-success\">Enable</span>"
+msgstr ""
+"<span class=\"o_stat_text\">تصحيح أخطاء</span>\n"
+"                                    <span class=\"o_warning_text\">مكن</span>"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "<span class=\"o_warning_text\">InActive</span>"
+msgstr "<span class=\"o_warning_text\">غير نشط</span>"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_kanban
+msgid ""
+"<span class=\"text-bg-danger\" invisible=\"is_connected\">Not Connected</span>\n"
+"                                    <span class=\"text-bg-success\" invisible=\"not is_connected\">Connected</span>"
+msgstr ""
+"<span class=\"text-bg-danger\" invisible=\"is_connected\">غير متصلة</span>\n"
+"                                    <span class=\"text-bg-success\" invisible=\"not is_connected\">متصل</span>"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_kanban
+msgid "<span class=\"text-bg-warning\">Archived</span>"
+msgstr "<span class=\"text-bg-warning\">تم وضعه في الأرشيف</span>"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "<span class=\"text-success\">Active</span>"
+msgstr "<span class=\"text-success\">نشط</span>"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid ""
+"<span class=\"text-success\">Developer</span>\n"
+"                                    <span class=\"o_stat_text text-success\">Mode</span>"
+msgstr ""
+"<span class=\"text-success\">المطور</span>\n"
+"                                    <span class=\"o_stat_text text-success\">وضع</span>"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid ""
+"<span class=\"text-warning\">Developer</span>\n"
+"                                    <span class=\"o_stat_text text-warning\">Mode</span>"
+msgstr ""
+"<span class=\"text-success\">المطور</span>\n"
+"                                    <span class=\"o_stat_text text-success\">وضع</span>"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "API Credentials"
+msgstr "بيانات اعتماد API"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "API Limit"
+msgstr "حد واجهة برمجة التطبيقات"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__access_token
+msgid "Access Token"
+msgstr "رمز الوصول المميز"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Access token"
+msgstr "رمز الوصول المميز"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.ui.menu,name:odoo_multi_accounting_solution.omas_account_feed_menu
+msgid "Account Feeds"
+msgstr "تغذية الحساب"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_account_mapping_tree
+msgid "Account Mapping"
+msgstr "رسم خرائط الحسابات"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_account_mapping
+msgid "Account Mapping Model for Odoo Multi Accounting Solution"
+msgstr "الطراز تعيين الحساب لحل Odoo للمحاسبة المتعددة"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.act_window,name:odoo_multi_accounting_solution.omas_account_mapping_action
+#: model:ir.ui.menu,name:odoo_multi_accounting_solution.omas_account_mapping_menu
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_account_mapping_view_search
+msgid "Account Mappings"
+msgstr "تعيينات الحساب"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_account_mapping_form
+msgid "Account Name"
+msgstr "إسم الحساب"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_export_operation__object__payments
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_import_operation__object__payments
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_manual_export__object__payments
+msgid "Account Payments"
+msgstr "مدفوعات الحساب"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__account_sequence_id
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Account Sequence"
+msgstr "تسلسل الحسابات"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_export_operation__object__accounts
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_import_operation__object__accounts
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_manual_export__object__accounts
+msgid "Accounts"
+msgstr "حسابات"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__message_needaction
+msgid "Action Needed"
+msgstr "الإجراء المطلوب اتخاذه"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__active
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_account_mapping__active
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_tax_mapping__active
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_search
+msgid "Active"
+msgstr "نشيط"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__activity_ids
+msgid "Activities"
+msgstr "أنشطة"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "زخرفة استثناء النشاط"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "أيقونة نوع النشاط"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__all_available_features
+msgid "All Available Features"
+msgstr "جميع الميزات المتاحة"
+
+#. module: odoo_multi_accounting_solution
+#. odoo-javascript
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#, python-format
+msgid "All Time"
+msgstr "كل الوقت"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_tax_mapping__tax_amount
+msgid "Amount"
+msgstr "كمية"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__api_limit
+msgid "Api Limit"
+msgstr "حد واجهة برمجة التطبيقات"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__message_attachment_count
+msgid "Attachment Count"
+msgstr "المرفقات عد"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__authorization_token
+msgid "Authorization Token"
+msgstr "الرمز المميز للتفويض"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Authorization token"
+msgstr "الرمز المميز للتفويض"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__auto_evaluate_feed
+msgid "Auto Evaluate Feed"
+msgstr "تغذية التقييم التلقائي"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Auto Evaluate Feeds"
+msgstr "التقييم التلقائي للخلاصات"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__avoid_duplicity
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Avoid Duplicity"
+msgstr "تجنب الازدواجية"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,help:odoo_multi_accounting_solution.field_omas__avoid_duplicity
+msgid "Avoid creating duplicate products in odoo"
+msgstr "تجنب إنشاء منتجات مكررة في odoo"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid ""
+"Avoid creating duplicate products in odoo based on the Barcode/Internal "
+"Reference"
+msgstr ""
+"تجنب إنشاء منتجات مكررة في odoo بناءً على الرمز الشريطي/الداخلي"
+"مرجع"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_product_mapping__barcode
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_template_mapping__barcode
+msgid "Barcode/EAN/UPC or ISBN"
+msgstr "الباركود/EAN/UPC أو ISBN"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_feed
+msgid "Base Feed for Odoo Multi-Accounting Solution"
+msgstr "التغذية الأساسية لحل Odoo للمحاسبة المتعددة"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_base_mapping
+msgid "Base Mapping Model for Odoo Multi Accounting Solution"
+msgstr "نموذج رسم الخرائط الأساسي لحل Odoo للمحاسبة المتعددة"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Basic Configuration"
+msgstr "التكوين الأساسي"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_invoice_feed_view_search
+msgid "Bills"
+msgstr "فواتير"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_account_feed__import_type__blank
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_import_operation__import_type__blank
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_tax_feed__import_type__blank
+msgid "Blank Mapping"
+msgstr "رسم الخرائط الفارغة"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_import_operation_view_form
+msgid ""
+"Blank Mapping: It will create blank mappings for selected object at the Odoo"
+" end."
+msgstr ""
+"تعيين فارغ: سيتم إنشاء تعيينات فارغة للكائن المحدد في Odoo"
+" نهاية."
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_export_operation_view_form
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_import_operation_view_form
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_manual_export_operation_view_form
+msgid "Cancel"
+msgstr "ألغى"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_instance_order_state__odoo_order_state__cancelled
+msgid "Cancelled"
+msgstr "ألغيت"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_category_mapping
+msgid "Category Mapping Model for Odoo Multi Accounting Solution"
+msgstr "نموذج تعيين الفئات لحل Odoo للمحاسبة المتعددة"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.act_window,name:odoo_multi_accounting_solution.omas_category_mapping_action
+#: model:ir.ui.menu,name:odoo_multi_accounting_solution.omas_category_mapping_menu
+msgid "Category Mappings"
+msgstr "تعيينات الفئة"
+
+#. module: odoo_multi_accounting_solution
+#. odoo-javascript
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#, python-format
+msgid "Change graph"
+msgstr "الرسم البياني للتغيير"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Click to Fetch Organizations from the Connected Instance"
+msgstr "انقر لجلب المؤسسات من المثيل المتصل"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__client_id
+msgid "Client ID"
+msgstr "معرف العميل"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Client Id"
+msgstr "معرف العميل"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__client_secret
+msgid "Client Secret"
+msgstr "سر العميل"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Client Secret Key"
+msgstr "المفتاح السري للعميل"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_message_wizard_view
+msgid "Close"
+msgstr "يغلق"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Company"
+msgstr "شركة"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__company_id
+msgid "Company Id"
+msgstr "معرّف الشركة"
+
+#. module: odoo_multi_accounting_solution
+#. odoo-javascript
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#, python-format
+msgid "Completed Orders"
+msgstr "الطلبات المكتملة"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Configuration"
+msgstr "التكوينات"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Configure Bills Cron settings"
+msgstr "تكوين إعدادات Bills Cron"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Configure Credit Notes Cron settings"
+msgstr "تكوين إعدادات Credit Notes Cron"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Configure Customer Cron settings"
+msgstr "قم بتكوين إعدادات Customer Cron"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Configure Invoice Cron settings"
+msgstr "تكوين إعدادات invoice cron"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Configure Payment Cron settings"
+msgstr "تكوين إعدادات Payment Cron"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Configure Product Cron settings"
+msgstr "قم بتكوين إعدادات Product Cron"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Configure Purchase Order Cron settings"
+msgstr "تكوين إعدادات أمر الشراء Cron"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Configure Refunds Cron settings"
+msgstr "قم بتكوين إعدادات Refunds Cron"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Configure Sale Order Cron settings"
+msgstr "تكوين إعدادات Cron لأوامر البيع"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Connect"
+msgstr "الاتصال"
+
+#. module: odoo_multi_accounting_solution
+#. odoo-javascript
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__is_connected
+#, python-format
+msgid "Connected"
+msgstr "متصل"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_instance_organization__connection_id
+msgid "Connection Id"
+msgstr "معرف الاتصال"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_customer_mapping__type__contact
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_customer_mapping_view_search
+msgid "Contacts"
+msgstr "جهات الاتصال"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_instance_order_state__odoo_create_invoice
+msgid "Create Invoice"
+msgstr "إنشاء فاتورة"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Create Online Connection"
+msgstr "إنشاء اتصال عبر الإنترنت"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_account_feed__import_type__create
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_tax_feed__import_type__create
+msgid "Create Record"
+msgstr "إنشاء سجل"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_import_operation__import_type__create
+msgid "Create Records"
+msgstr "إنشاء السجلات"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_import_operation_view_form
+msgid ""
+"Create Records: It will create new records for selected object in Odoo."
+msgstr ""
+"إنشاء سجلات: سيتم إنشاء سجلات جديدة للكائن المحدد في Odoo."
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_instance_order_state__odoo_ship_order
+msgid "Create Shipment"
+msgstr "إنشاء شحنة"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,help:odoo_multi_accounting_solution.field_omas_instance_order_state__odoo_create_invoice
+msgid "Create invoice in odoo."
+msgstr "إنشاء فاتورة في odoo."
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_account_feed__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_account_mapping__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_base_mapping__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_category_mapping__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_customer_feed__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_customer_mapping__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_account__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_customer__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_invoice__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_operation__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_order__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_payment__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_product__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_purchase_order__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_feed__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_account__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_customer__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_invoice__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_operation__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_order__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_payment__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_product__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_purchase_order__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_instance_order_state__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_instance_organization__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_invoice_feed__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_invoice_mapping__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_manual_export__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_message_wizard__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_order_feed__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_order_mapping__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_feed__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_mapping__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_method_mapping__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_term_mapping__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_product_feed__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_product_mapping__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_purchase_order_feed__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_purchase_order_mapping__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_shipping_mapping__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_tax_feed__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_tax_mapping__create_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_template_mapping__create_uid
+msgid "Created by"
+msgstr "انشأ من قبل"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_account_feed__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_account_mapping__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_base_mapping__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_category_mapping__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_customer_feed__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_customer_mapping__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_account__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_customer__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_invoice__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_operation__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_order__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_payment__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_product__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_purchase_order__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_feed__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_account__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_customer__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_invoice__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_operation__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_order__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_payment__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_product__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_purchase_order__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_instance_order_state__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_instance_organization__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_invoice_feed__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_invoice_mapping__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_manual_export__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_message_wizard__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_order_feed__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_order_mapping__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_feed__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_mapping__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_method_mapping__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_term_mapping__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_product_feed__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_product_mapping__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_purchase_order_feed__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_purchase_order_mapping__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_shipping_mapping__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_tax_feed__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_tax_mapping__create_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_template_mapping__create_date
+msgid "Created on"
+msgstr "تم إنشاؤها على"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_export_operation__credit_refund_selection__out_refund
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_import_operation__credit_refund_selection__out_refund
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_invoice_feed__feed_move_type__out_refund
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_invoice_mapping__mapping_move_type__out_refund
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_manual_export__credit_refund_selection__out_refund
+msgid "Credit Note"
+msgstr "ملاحظة ائتمانية"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_export_operation_view_form
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_import_operation_view_form
+msgid "Credit Note Type"
+msgstr "نوع إشعار الائتمان"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_export_operation__object__credit_notes
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_import_operation__object__credit_notes
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_manual_export__object__credit_notes
+#: model:ir.ui.menu,name:odoo_multi_accounting_solution.menu_action_move_out_refund
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_invoice_feed_view_search
+msgid "Credit Notes"
+msgstr "ملاحظات ائتمانية"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.act_window,name:odoo_multi_accounting_solution.action_account_move_out_refund
+msgid "Credit Notes Mapping"
+msgstr "رسم خرائط مذكرة الائتمان"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_operation__credit_refund_selection
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_operation__credit_refund_selection
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_manual_export__credit_refund_selection
+msgid "Credit Refund Selection"
+msgstr "اختيار استرداد الائتمان"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Cron Configuration"
+msgstr "تكوين cron"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Crons"
+msgstr "Crons"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__currency_id
+msgid "Currency"
+msgstr "عملة"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Currency Code"
+msgstr "كود العملة"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_account_mapping_form
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_tax_mapping_form
+msgid "Current State of the record"
+msgstr "الحالة الحالية للسجل"
+
+#. module: odoo_multi_accounting_solution
+#. odoo-javascript
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_customer_mapping__customer_type__customer
+#, python-format
+msgid "Customer"
+msgstr "عميل"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.actions.act_window,help:odoo_multi_accounting_solution.action_account_move_out_refund
+msgid "Customer Credit Notes will be visible here"
+msgstr "ستكون إشعارات ائتمان العملاء مرئية هنا"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.ui.menu,name:odoo_multi_accounting_solution.omas_customer_feed_menu
+msgid "Customer Feeds"
+msgstr "خلاصات العملاء"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_invoice_feed__feed_move_type__out_invoice
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_invoice_mapping__mapping_move_type__out_invoice
+msgid "Customer Invoice"
+msgstr "فاتورة العميل"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_export_operation__invoice_bill_selection__out_invoice
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_import_operation__invoice_bill_selection__out_invoice
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_manual_export__invoice_bill_selection__out_invoice
+#: model:ir.ui.menu,name:odoo_multi_accounting_solution.omas_invoice_mapping_menu
+msgid "Customer Invoices"
+msgstr "فواتير العملاء"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.act_window,name:odoo_multi_accounting_solution.omas_invoice_mapping_action
+msgid "Customer Invoices Mapping"
+msgstr "رسم خرائط فواتير العملاء"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_customer_mapping
+msgid "Customer Mapping Model for Odoo Multi Accounting Solution"
+msgstr "نموذج خرائط العملاء ل  Odoo حل متعدد للمحاسبة"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.act_window,name:odoo_multi_accounting_solution.omas_customer_mapping_action
+#: model:ir.ui.menu,name:odoo_multi_accounting_solution.omas_customer_mapping_menu
+msgid "Customer Mappings"
+msgstr "تعيينات الزبائن"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_customer_mapping__customer_type
+msgid "Customer Type"
+msgstr "نوع العملاء"
+
+#. module: odoo_multi_accounting_solution
+#. odoo-javascript
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_export_operation__object__customers
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_import_operation__object__customers
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_manual_export__object__customers
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_customer_mapping_view_search
+#, python-format
+msgid "Customers"
+msgstr "الزبائن"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.ui.menu,name:odoo_multi_accounting_solution.omas_dashboard_menu
+msgid "Dashboard"
+msgstr "لوحة القيادة"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_account_feed__data
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_customer_feed__data
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_feed__data
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_invoice_feed__data
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_order_feed__data
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_feed__data
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_product_feed__data
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_purchase_order_feed__data
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_tax_feed__data
+msgid "Data"
+msgstr "بيانات"
+
+#. module: odoo_multi_accounting_solution
+#. odoo-javascript
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#, python-format
+msgid "Date"
+msgstr "تاريخ"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__debug
+msgid "Debug"
+msgstr "تصحيح"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__default_category_id
+msgid "Default Category"
+msgstr "الفئة الافتراضية"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,help:odoo_multi_accounting_solution.field_omas__default_category_id
+msgid "Default Category will be used in products"
+msgstr "سيتم استخدام الفئة الافتراضية في المنتجات"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Default Location for Channel"
+msgstr "الموقع الافتراضي للقناة"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__order_state_ids
+msgid "Default Odoo Order States"
+msgstr "حالات طلب Odoo الافتراضية"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__payment_method_id
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Default Payment Method"
+msgstr "طريقة الدفع الافتراضية"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__pricelist_id
+msgid "Default Pricelist"
+msgstr "قائمة الأسعار الافتراضية"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_instance_order_state__default_order_state
+msgid "Default State"
+msgstr "الحالة الافتراضية"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__default_tax_type
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Default Tax Type"
+msgstr "نوع الضريبة الافتراضي"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Default Warehouse for Channel"
+msgstr "المستودع الافتراضي للقناة"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_product_mapping__default_code
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_template_mapping__default_code
+msgid "Default code/SKU"
+msgstr "الرمز الافتراضي/SKU"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,help:odoo_multi_accounting_solution.field_omas_instance_order_state__default_order_state
+msgid "Default state if store state does not match the odoo state."
+msgstr "الحالة الافتراضية إذا كانت حالة المتجر لا تتطابق مع حالة odoo."
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_customer_mapping__type__delivery
+msgid "Delivery"
+msgstr "توصيل"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__delivery_product_id
+#: model:product.template,name:odoo_multi_accounting_solution.delivery_product_product_template
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Delivery Product"
+msgstr "منتج التسليم"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Disconnect"
+msgstr "قطع الاتصال"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__discount_product_id
+#: model:product.template,name:odoo_multi_accounting_solution.discount_product_product_template
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Discount Product"
+msgstr "منتج الخصم"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_account_feed__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_account_mapping__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_base_mapping__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_category_mapping__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_customer_feed__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_customer_mapping__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_account__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_customer__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_invoice__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_operation__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_order__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_payment__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_product__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_purchase_order__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_feed__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_account__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_customer__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_invoice__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_operation__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_order__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_payment__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_product__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_purchase_order__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_instance_order_state__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_instance_organization__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_invoice_feed__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_invoice_mapping__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_manual_export__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_message_wizard__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_order_feed__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_order_mapping__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_feed__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_mapping__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_method_mapping__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_term_mapping__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_product_feed__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_product_mapping__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_purchase_order_feed__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_purchase_order_mapping__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_shipping_mapping__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_tax_feed__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_tax_mapping__display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_template_mapping__display_name
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_payment_method_mapping_form
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_account_feed__state__done
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_customer_feed__state__done
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_feed__state__done
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_invoice_feed__state__done
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_order_feed__state__done
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_payment_feed__state__done
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_product_feed__state__done
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_purchase_order_feed__state__done
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_tax_feed__state__done
+msgid "Done"
+msgstr "مطهو إلى حد كاف"
+
+#. module: odoo_multi_accounting_solution
+#. odoo-javascript
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#, python-format
+msgid "Donut Chart"
+msgstr "مخطط الدونات"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_account_feed__state__draft
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_customer_feed__state__draft
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_feed__state__draft
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_invoice_feed__state__draft
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_order_feed__state__draft
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_payment_feed__state__draft
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_product_feed__state__draft
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_purchase_order_feed__state__draft
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_tax_feed__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: odoo_multi_accounting_solution
+#. odoo-javascript
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#, python-format
+msgid "EXPORT"
+msgstr "يصدّر"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Enable Credit Notes Cron"
+msgstr "تمكين كرون ملاحظات الائتمان"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Enable Customer Cron"
+msgstr "تمكين  كرون عميل"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Enable Customer Invoice Cron"
+msgstr "تمكين كرون فاتورة العميل"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Enable Payment Cron"
+msgstr "تمكين كرون الدفع"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Enable Product Cron"
+msgstr "تمكين كرون المنتج"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Enable Purchase Order Cron"
+msgstr "تمكين أمر الشراء كرون"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Enable Sale Order Cron"
+msgstr "تمكين كرون أمر البيع"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Enable Vendor Bills Cron"
+msgstr "تمكين كرون فواتير البائع"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Enable Vendor Refunds Cron"
+msgstr "تمكين المبالغ المستردة للموردين Cron"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Enable to Auto Evaluate Feed"
+msgstr "تمكين التقييم التلقائي للخلاصة"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Enable to Set Account Sequence"
+msgstr "تمكين ضبط تسلسل الحساب"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Enable to Set Payment Method Code Sequence"
+msgstr "تمكين لتعيين تسلسل رمز طريقة الدفع"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Enable to Set Product Sequence"
+msgstr "تمكين لتعيين تسلسل المنتج"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_account_feed__state__error
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_customer_feed__state__error
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_feed__state__error
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_invoice_feed__state__error
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_order_feed__state__error
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_payment_feed__state__error
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_product_feed__state__error
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_purchase_order_feed__state__error
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_tax_feed__state__error
+msgid "Error"
+msgstr "ضلال"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.server,name:odoo_multi_accounting_solution.omas_sync_account_feed_values
+msgid "Evaluate Account Feed"
+msgstr "تقييم تغذية الحساب"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.server,name:odoo_multi_accounting_solution.omas_sync_customer_feed_values
+msgid "Evaluate Customer Feed"
+msgstr "تقييم خلاصات العملاء"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_account_feed_view_form
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_customer_feed_view_form
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_invoice_feed_view_form
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_order_feed_view_form
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_payment_feed_view_form
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_product_feed_view_form
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_purchase_order_feed_view_form
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_tax_feed_view_form
+msgid "Evaluate Feed"
+msgstr "تقييم الأعلاف"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.server,name:odoo_multi_accounting_solution.omas_sync_order_feed_values
+msgid "Evaluate Order Feed"
+msgstr "تقييم تغذية الطلبات"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.server,name:odoo_multi_accounting_solution.omas_sync_payment_feed_values
+msgid "Evaluate Payment Feed"
+msgstr "تقييم خلاصات الدفع"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.server,name:odoo_multi_accounting_solution.omas_sync_invoice_feed_values
+#: model:ir.actions.server,name:odoo_multi_accounting_solution.omas_sync_product_feed_values
+msgid "Evaluate Product Feed"
+msgstr "تقييم علف المنتج"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.server,name:odoo_multi_accounting_solution.omas_sync_purchase_order_feed_values
+msgid "Evaluate Purchase Order Feed"
+msgstr "تقييم تغذية طلبات الشراء"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.server,name:odoo_multi_accounting_solution.omas_sync_tax_feed_values
+msgid "Evaluate Tax Feed"
+msgstr "تقييم التغذية الضريبية"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Example: 542876777777alnfltm4e1us7e9v74p3qdddvm77"
+msgstr "مثال: 542876777777alnfltm4e1us7e9v74p3qdddvm77"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Example: _1g7MbKN28IQzcg-2qdratY7"
+msgstr "مثال: _1g7MbKN28IQzcg-2qdratY7"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas__default_tax_type__exclude
+msgid "Excluded In Price"
+msgstr "مستبعد في السعر"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_export_operation__operation__export
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_manual_export__operation__export
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_export_operation_view_form
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_manual_export_operation_view_form
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Export"
+msgstr "يصدّر"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_account_feed_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_customer_feed_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_invoice_feed_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_order_feed_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_payment_feed_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_product_feed_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_purchase_order_feed_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_tax_feed_view_search
+msgid "Feed"
+msgstr "علف"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.ui.menu,name:odoo_multi_accounting_solution.omas_feed_menu
+msgid "Feeds"
+msgstr "تغذية"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Fetch Organizations"
+msgstr "إحضار المنظمات"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_account_feed_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_customer_feed_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_order_feed_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_payment_feed_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_product_feed_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_purchase_order_feed_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_tax_feed_view_search
+msgid "Filters"
+msgstr "المرشحات"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__message_follower_ids
+msgid "Followers"
+msgstr "متابعون"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,help:odoo_multi_accounting_solution.field_omas__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "الخط أيقونة رهيبة على سبيل المثال مهام fa-tasks"
+
+#. module: odoo_multi_accounting_solution
+#: model:res.groups,comment:odoo_multi_accounting_solution.group_omas_manager
+msgid "Full Access to the Odoo Multi-Accounting Solution."
+msgstr "الوصول الكامل إلى حل Odoo للمحاسبة المتعددة."
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_account_feed_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_account_mapping_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_category_mapping_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_customer_feed_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_customer_mapping_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_invoice_feed_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_invoice_mapping_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_order_feed_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_order_mapping_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_payment_feed_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_payment_mapping_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_payment_method_mapping_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_payment_term_mapping_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_product_feed_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_product_mapping_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_purchase_order_feed_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_purchase_order_mapping_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_shipping_mapping_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_tax_feed_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_tax_mapping_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_template_mapping_view_search
+msgid "Group By..."
+msgstr "المجموعة حسب..."
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__has_message
+msgid "Has Message"
+msgstr "has رسالة"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_account_feed__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_account_mapping__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_base_mapping__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_category_mapping__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_customer_feed__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_customer_mapping__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_account__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_customer__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_invoice__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_operation__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_order__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_payment__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_product__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_purchase_order__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_feed__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_account__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_customer__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_invoice__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_operation__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_order__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_payment__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_product__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_purchase_order__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_instance_order_state__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_instance_organization__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_invoice_feed__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_invoice_mapping__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_manual_export__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_message_wizard__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_order_feed__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_order_mapping__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_feed__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_mapping__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_method_mapping__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_term_mapping__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_product_feed__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_product_mapping__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_purchase_order_feed__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_purchase_order_mapping__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_shipping_mapping__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_tax_feed__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_tax_mapping__id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_template_mapping__id
+msgid "ID"
+msgstr "ID"
+
+#. module: odoo_multi_accounting_solution
+#. odoo-javascript
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#, python-format
+msgid "IMPORT"
+msgstr "استيراد"
+
+#. module: odoo_multi_accounting_solution
+#. odoo-javascript
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#, python-format
+msgid "INSTANCES"
+msgstr "المثيلات"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__activity_exception_icon
+msgid "Icon"
+msgstr "أيقونة"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,help:odoo_multi_accounting_solution.field_omas__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "أيقونة للإشارة إلى نشاط الاستثناء."
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,help:odoo_multi_accounting_solution.field_omas__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا تم تحديدها، فإن الرسائل الجديدة تتطلب انتباهك."
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,help:odoo_multi_accounting_solution.field_omas__message_has_error
+#: model:ir.model.fields,help:odoo_multi_accounting_solution.field_omas__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم التحقق، فإن بعض الرسائل تحتوي على خطأ في التسليم."
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__image
+msgid "Image"
+msgstr "الصورة"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_account_mapping__operation__import
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_base_mapping__operation__import
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_category_mapping__operation__import
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_customer_mapping__operation__import
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_import_operation__operation__import
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_invoice_mapping__operation__import
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_order_mapping__operation__import
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_payment_mapping__operation__import
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_payment_method_mapping__operation__import
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_payment_term_mapping__operation__import
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_product_mapping__operation__import
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_purchase_order_mapping__operation__import
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_shipping_mapping__operation__import
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_tax_mapping__operation__import
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_template_mapping__operation__import
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_import_operation_view_form
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Import"
+msgstr "استيراد"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Import Bill Date"
+msgstr "تاريخ فاتورة الاستيراد"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__use_bill_cron
+msgid "Import Bills Cron"
+msgstr "استيراد فواتير cron"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__import_bill_date
+msgid "Import Bills Date"
+msgstr "تاريخ فاتورة الاستيراد"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__use_credit_notes_cron
+msgid "Import Credit Notes Cron"
+msgstr "استيراد الملاحظات الائتمانية Cron"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__import_credit_notes_date
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Import Credit Notes Date"
+msgstr " استيراد بلح إشعارات   الائتمان"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Import Customer Date"
+msgstr "تاريخ استيراد العميل"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__import_invoice_date
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Import Invoice Date"
+msgstr "تاريخ فاتورة الاستيراد"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__import_order_date
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Import Order Date"
+msgstr "تاريخ أمر الاستيراد"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__import_customer_date
+msgid "Import Partner Date"
+msgstr "استيراد تاريخ الشريك"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__import_payment_date
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Import Payment Date"
+msgstr "تاريخ دفع الاستيراد"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__import_product_date
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Import Product Date"
+msgstr "تاريخ  المنتج المستورد"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__import_purchase_order_date
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Import Purchase Order Date"
+msgstr "تاريخ استيراد طلب الشراء"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Import Refund Date"
+msgstr "تاريخ استرداد الاستيراد"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__use_refund_cron
+msgid "Import Refunds Cron"
+msgstr "مستردات الاستيراد cron"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__import_refund_date
+msgid "Import Refunds Date"
+msgstr "تاريخ استرداد الاستيراد"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_account_feed__import_type
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_operation__import_type
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_tax_feed__import_type
+msgid "Import Type"
+msgstr "نوع الاستيراد"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,help:odoo_multi_accounting_solution.field_omas__order_state_ids
+msgid "Imported order will process in odoo on basis of these state mappings."
+msgstr "ستتم  الطلب المستورد في odoo على أساس التعيين الحالة هذه."
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas__default_tax_type__include
+msgid "Included In Price"
+msgstr "متضمن في السعر"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__instance
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_account_feed__instance
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_account_mapping__instance
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_base_mapping__instance
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_category_mapping__instance
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_customer_feed__instance
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_customer_mapping__instance
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_operation__instance_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_feed__instance
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_operation__instance_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_instance_order_state__instance_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_instance_organization__instance_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_invoice_feed__instance
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_invoice_mapping__instance
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_manual_export__instance_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_order_feed__instance
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_order_mapping__instance
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_feed__instance
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_mapping__instance
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_method_mapping__instance
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_term_mapping__instance
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_product_feed__instance
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_product_mapping__instance
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_purchase_order_feed__instance
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_purchase_order_mapping__instance
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_shipping_mapping__instance
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_tax_feed__instance
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_tax_mapping__instance
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_template_mapping__instance
+#: model:ir.ui.menu,name:odoo_multi_accounting_solution.omas_instance_menu
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_account_feed_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_account_mapping_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_category_mapping_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_customer_feed_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_customer_mapping_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_invoice_feed_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_invoice_mapping_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_order_feed_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_order_mapping_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_payment_feed_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_payment_mapping_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_payment_method_mapping_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_payment_term_mapping_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_product_feed_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_product_mapping_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_purchase_order_feed_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_purchase_order_mapping_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_shipping_mapping_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_tax_feed_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_tax_mapping_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_template_mapping_view_search
+msgid "Instance"
+msgstr "المثيلات"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_account_mapping__instance_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_base_mapping__instance_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_category_mapping__instance_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_customer_mapping__instance_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_invoice_mapping__instance_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_order_mapping__instance_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_mapping__instance_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_method_mapping__instance_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_term_mapping__instance_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_product_mapping__instance_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_purchase_order_mapping__instance_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_shipping_mapping__instance_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_tax_mapping__instance_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_template_mapping__instance_id
+msgid "Instance ID"
+msgstr "معرف المثيل"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_account_feed__instance_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_customer_feed__instance_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_feed__instance_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_invoice_feed__instance_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_order_feed__instance_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_feed__instance_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_product_feed__instance_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_purchase_order_feed__instance_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_tax_feed__instance_id
+msgid "Instance Id"
+msgstr "معرف المثيل"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_kanban
+msgid "Instance Image"
+msgstr "صورة المثيل"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_instance_order_state__instance_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_instance_organization__instance_name
+msgid "Instance Name"
+msgstr "اسم المثيل"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_instance_order_state__instance_state
+msgid "Instance Order State"
+msgstr "حالة ترتيب المثيل"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_operation__instance
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_operation__instance
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_manual_export__instance
+msgid "Instance Type"
+msgstr "نوع المثيل"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Instance Type:"
+msgstr "نوع المثيل:"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Instance name"
+msgstr "اسم المثيل"
+
+#. module: odoo_multi_accounting_solution
+#. odoo-javascript
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_customer_mapping__type__invoice
+#, python-format
+msgid "Invoice"
+msgstr "فاتورة"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_operation__invoice_bill_selection
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_operation__invoice_bill_selection
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_manual_export__invoice_bill_selection
+msgid "Invoice Bill Selection"
+msgstr "اختيار فاتورة "
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.ui.menu,name:odoo_multi_accounting_solution.omas_invoice_feed_menu
+msgid "Invoice Feeds"
+msgstr "تغذية الفواتير"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_invoice_mapping
+msgid "Invoice Mapping Model for Odoo Multi Accounting Solution"
+msgstr "نموذج رسم الخرائط الفاتورة لحل Odoo للمحاسبة المتعددة"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_export_operation_view_form
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_import_operation_view_form
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_invoice_mapping_view_search
+msgid "Invoice Type"
+msgstr "نوع الفاتورة"
+
+#. module: odoo_multi_accounting_solution
+#. odoo-javascript
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_export_operation__object__invoices
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_import_operation__object__invoices
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_manual_export__object__invoices
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_invoice_feed_view_search
+#, python-format
+msgid "Invoices"
+msgstr "الفواتير"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__message_is_follower
+msgid "Is Follower"
+msgstr "هل التابع"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__language_id
+msgid "Language"
+msgstr "لغة"
+
+#. module: odoo_multi_accounting_solution
+#. odoo-javascript
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#, python-format
+msgid "Last 1 Year"
+msgstr "آخر سنة واحدة"
+
+#. module: odoo_multi_accounting_solution
+#. odoo-javascript
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#, python-format
+msgid "Last 12 Months"
+msgstr "آخر 12 شهرًا"
+
+#. module: odoo_multi_accounting_solution
+#. odoo-javascript
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#, python-format
+msgid "Last 12 months"
+msgstr "آخر 12 شهرًا"
+
+#. module: odoo_multi_accounting_solution
+#. odoo-javascript
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#, python-format
+msgid "Last 15 Days"
+msgstr "آخر 15 يومًا"
+
+#. module: odoo_multi_accounting_solution
+#. odoo-javascript
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#, python-format
+msgid "Last 30 Days"
+msgstr "آخر 30 يومًا"
+
+#. module: odoo_multi_accounting_solution
+#. odoo-javascript
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#, python-format
+msgid "Last 6 months"
+msgstr "آخر 6 أشهر"
+
+#. module: odoo_multi_accounting_solution
+#. odoo-javascript
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#, python-format
+msgid "Last 7 Days"
+msgstr "اخر 7 ايام"
+
+#. module: odoo_multi_accounting_solution
+#. odoo-javascript
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#, python-format
+msgid "Last 7 days"
+msgstr "اخر 7 ايام"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_account_feed__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_account_mapping__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_base_mapping__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_category_mapping__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_customer_feed__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_customer_mapping__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_account__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_customer__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_invoice__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_operation__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_order__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_payment__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_product__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_purchase_order__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_feed__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_account__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_customer__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_invoice__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_operation__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_order__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_payment__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_product__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_purchase_order__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_instance_order_state__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_instance_organization__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_invoice_feed__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_invoice_mapping__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_manual_export__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_message_wizard__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_order_feed__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_order_mapping__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_feed__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_mapping__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_method_mapping__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_term_mapping__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_product_feed__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_product_mapping__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_purchase_order_feed__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_purchase_order_mapping__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_shipping_mapping__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_tax_feed__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_tax_mapping__write_uid
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_template_mapping__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_account_feed__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_account_mapping__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_base_mapping__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_category_mapping__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_customer_feed__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_customer_mapping__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_account__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_customer__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_invoice__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_operation__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_order__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_payment__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_product__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_purchase_order__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_feed__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_account__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_customer__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_invoice__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_operation__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_order__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_payment__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_product__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_purchase_order__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_instance_order_state__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_instance_organization__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_invoice_feed__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_invoice_mapping__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_manual_export__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_message_wizard__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_order_feed__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_order_mapping__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_feed__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_mapping__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_method_mapping__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_term_mapping__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_product_feed__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_product_mapping__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_purchase_order_feed__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_purchase_order_mapping__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_shipping_mapping__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_tax_feed__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_tax_mapping__write_date
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_template_mapping__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث بتاريخ"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Location"
+msgstr "موقع"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_account_feed__logs
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_customer_feed__logs
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_feed__logs
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_invoice_feed__logs
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_order_feed__logs
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_feed__logs
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_product_feed__logs
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_purchase_order_feed__logs
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_tax_feed__logs
+msgid "Logs"
+msgstr "زند الخشب"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model,name:odoo_multi_accounting_solution.model_mail_tracking_value
+msgid "Mail Tracking Value"
+msgstr "قيمة متتبع البريد"
+
+#. module: odoo_multi_accounting_solution
+#: model:res.groups,name:odoo_multi_accounting_solution.group_omas_manager
+msgid "Manager"
+msgstr "القيم على النفقة في المنزل"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_manual_export
+msgid "Manual Export"
+msgstr "التصدير اليدوي"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.ui.menu,name:odoo_multi_accounting_solution.omas_mapping_menu
+msgid "Mappings"
+msgstr "رسم خرائط"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_account_feed__message
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_customer_feed__message
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_feed__message
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_invoice_feed__message
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_message_wizard__text
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_order_feed__message
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_feed__message
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_product_feed__message
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_purchase_order_feed__message
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_tax_feed__message
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_message_wizard_view
+msgid "Message"
+msgstr "رسالة"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_message_wizard
+msgid "Message Wizard For Odoo Multi Accounting Solution"
+msgstr "المعالج الرسالة لحل Odoo للمحاسبة المتعددة"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__message_ids
+msgid "Messages"
+msgstr "رسائل"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.act_window,name:odoo_multi_accounting_solution.manual_account_account_order_action
+msgid "Multi Accounting - Export Account"
+msgstr "متعدد المحاسبة  - حساب التصدير"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.act_window,name:odoo_multi_accounting_solution.manual_export_account_move_action
+msgid "Multi Accounting - Export Invoice"
+msgstr "متعدد المحاسبة  - الفاتورة التصدير"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.act_window,name:odoo_multi_accounting_solution.manual_export_sale_order_action
+msgid "Multi Accounting - Export Order"
+msgstr "متعدد المحاسبة  - الطلب التصدير"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.act_window,name:odoo_multi_accounting_solution.manual_export_res_partner_action
+msgid "Multi Accounting - Export Partner"
+msgstr "متعدد المحاسبة  - الشريك التصدير"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.act_window,name:odoo_multi_accounting_solution.manual_account_account_payment_action
+msgid "Multi Accounting - Export Payment"
+msgstr "متعدد المحاسبة  - الدفع التصدير"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.act_window,name:odoo_multi_accounting_solution.manual_export_product_product_action
+msgid "Multi Accounting - Export Product"
+msgstr "متعدد المحاسبة  - المنتج التصدير"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.act_window,name:odoo_multi_accounting_solution.manual_export_purchase_order_action
+msgid "Multi Accounting - Export Purchase Order"
+msgstr "متعدد المحاسبة  - أمر الشراء التصدير"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "الموعد النهائي لنشاطي"
+
+#. module: odoo_multi_accounting_solution
+#. odoo-javascript
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_account_feed__name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_account_mapping__mapping_display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_customer_feed__name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_feed__name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_instance_organization__name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_invoice_feed__name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_order_feed__name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_feed__name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_method_mapping__mapping_display_name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_product_feed__name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_purchase_order_feed__name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_tax_feed__name
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_tax_mapping__mapping_display_name
+#, python-format
+msgid "Name"
+msgstr "اسم"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_account_mapping_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_category_mapping_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_customer_mapping_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_invoice_mapping_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_order_mapping_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_payment_mapping_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_payment_method_mapping_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_payment_term_mapping_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_product_mapping_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_purchase_order_mapping_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_shipping_mapping_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_tax_mapping_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_template_mapping_view_search
+msgid "Need Update"
+msgstr "بحاجة إلى التحديث"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط القادم"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: odoo_multi_accounting_solution
+#. odoo-javascript
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#, python-format
+msgid "Not Found!"
+msgstr "غير معثور عليه!"
+
+#. module: odoo_multi_accounting_solution
+#. odoo-javascript
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#, python-format
+msgid "Number"
+msgstr "رقم"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات المتخذ"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,help:odoo_multi_accounting_solution.field_omas__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "عدد الرسائل التي تتطلب اتخاذ إجراء"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,help:odoo_multi_accounting_solution.field_omas__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل التي بها خطأ في التسليم"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.act_window,name:odoo_multi_accounting_solution.omas_account_feed_action
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_account_feed
+msgid "OMAS Account Feeds"
+msgstr "خلاصات حساب OMAS"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.act_window,name:odoo_multi_accounting_solution.omas_customer_feed_action
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_customer_feed
+msgid "OMAS Customer Feeds"
+msgstr "خلاصات عملاء OMAS"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_export_account
+msgid "OMAS Export Account"
+msgstr "حساب التصدير OMAS"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.act_window,name:odoo_multi_accounting_solution.omas_export_operation_action
+msgid "OMAS Export Wizard"
+msgstr "معالج التصدير OMAS"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_export_customer
+msgid "OMAS Export customer"
+msgstr "عميل تصدير OMAS"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_export_invoice
+msgid "OMAS Export invoice"
+msgstr "فاتورة تصدير OMAS"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_export_order
+msgid "OMAS Export order"
+msgstr "أمر التصدير OMAS"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_export_payment
+msgid "OMAS Export payment"
+msgstr "OMAS دفع الصادرات"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_export_purchase_order
+msgid "OMAS Export purchase order"
+msgstr "أمر شراء تصدير OMAS"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.server,name:odoo_multi_accounting_solution.omas_feed_evaluation_cron_ir_actions_server
+msgid "OMAS Feed Evaluation-Cron"
+msgstr "تقييم يٌطعم OMAS-Cron"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_import_account
+msgid "OMAS Import Account"
+msgstr "حساب استيراد OMAS"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.server,name:odoo_multi_accounting_solution.omas_import_bill_cron_ir_actions_server
+msgid "OMAS Import Bills"
+msgstr "فواتير استيراد OMAS"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.server,name:odoo_multi_accounting_solution.omas_import_credit_notes_cron_ir_actions_server
+msgid "OMAS Import Credit Notes"
+msgstr "ملحوظات ائتمان الاستيراد الخاصة بـ OMAS"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.server,name:odoo_multi_accounting_solution.omas_import_customer_cron_ir_actions_server
+msgid "OMAS Import Customer"
+msgstr "عميل استيراد OMAS"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.server,name:odoo_multi_accounting_solution.omas_import_invoice_cron_ir_actions_server
+msgid "OMAS Import Invoice"
+msgstr "OMAS استيراد فواتير العملاء"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.server,name:odoo_multi_accounting_solution.omas_import_order_cron_ir_actions_server
+msgid "OMAS Import Order"
+msgstr "طلب استيراد OMAS"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.server,name:odoo_multi_accounting_solution.omas_import_payment_cron_ir_actions_server
+msgid "OMAS Import Payment"
+msgstr "OMAS استيراد الدفع"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.server,name:odoo_multi_accounting_solution.omas_import_product_cron_ir_actions_server
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_import_product
+msgid "OMAS Import Product"
+msgstr "منتج استيراد OMAS"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.server,name:odoo_multi_accounting_solution.omas_import_purchase_order_cron_ir_actions_server
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_import_purchase_order
+msgid "OMAS Import Purchase Order"
+msgstr "أمر شراء استيراد نظام OMAS"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.server,name:odoo_multi_accounting_solution.omas_import_refund_cron_ir_actions_server
+msgid "OMAS Import Refunds"
+msgstr "مستردات الواردات من نظام OMAS"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.act_window,name:odoo_multi_accounting_solution.omas_import_operation_action
+msgid "OMAS Import Wizard"
+msgstr "معالج استيراد نظام OMAS"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_import_customer
+msgid "OMAS Import customer"
+msgstr "عميل استيراد أوماس"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_import_invoice
+msgid "OMAS Import invoice"
+msgstr "فاتورة استيراد نظام OMAS"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_import_order
+msgid "OMAS Import order"
+msgstr "طلب الاستيراد من OMAS"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_import_payment
+msgid "OMAS Import payment"
+msgstr "OMAS استيراد الدفع"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_instance_order_state
+msgid "OMAS Instance Order State"
+msgstr "حالة ترتيب مثيل نظام OMAS"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_instance_organization
+msgid "OMAS Instance Organizations"
+msgstr "منظمات مثيلات نظام أوماس"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.act_window,name:odoo_multi_accounting_solution.omas_invoice_feed_action
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_invoice_feed
+msgid "OMAS Invoice Feeds"
+msgstr "تغذية فاتورة OMAS"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.act_window,name:odoo_multi_accounting_solution.omas_order_feed_action
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_order_feed
+msgid "OMAS Order Feeds"
+msgstr "تغذية طلب OMAS"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.act_window,name:odoo_multi_accounting_solution.omas_payment_feed_action
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_payment_feed
+msgid "OMAS Payment Feeds"
+msgstr "خلاصات دفع OMAS"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.act_window,name:odoo_multi_accounting_solution.omas_product_feed_action
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_product_feed
+msgid "OMAS Product Feeds"
+msgstr "علف منتجات  OMAS"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.act_window,name:odoo_multi_accounting_solution.omas_purchase_order_feed_action
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_purchase_order_feed
+msgid "OMAS Purchase Order Feeds"
+msgstr "علف طلب الشراء OMAS"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.act_window,name:odoo_multi_accounting_solution.omas_tax_feed_action
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_tax_feed
+msgid "OMAS Tax Feeds"
+msgstr "OMAS ضريبة يٌطعم"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_export_product
+msgid "OMAS export Product"
+msgstr "منتج التصدير OMAS"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_operation__object
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_operation__object
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_manual_export__object
+msgid "Object"
+msgstr "مفعول به"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_account_mapping__name
+msgid "Odoo Account"
+msgstr "حساب اودو"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_account_mapping__odoo_account_id
+msgid "Odoo Account ID"
+msgstr "معرف حساب اودو"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_shipping_mapping__name
+msgid "Odoo Carrier"
+msgstr "أودو الناقل"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_category_mapping__name
+msgid "Odoo Category"
+msgstr "Odoo الفئة"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_category_mapping__odoo_category_id
+msgid "Odoo Category ID"
+msgstr "معرف الفئة أودو"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_customer_mapping__name
+msgid "Odoo Customer"
+msgstr "زبون أودو"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_customer_mapping__odoo_customer_id
+msgid "Odoo Customer ID"
+msgstr "معرّف العميل أودو"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Odoo Developer Mode is Active, Click to Deactivate"
+msgstr "وضع مطور Odoo نشط، انقر لإلغاء التنشيط"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid ""
+"Odoo Developer Mode is not Active, Activate to View Multi Accounting Feeds "
+"Data"
+msgstr ""
+"وضع مطور Odoo غير نشط، قم بالتنشيط لعرض موجزات المحاسبة المتعددة"
+"بيانات"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_invoice_mapping__name
+msgid "Odoo Invoice"
+msgstr "فاتورة اودو"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_invoice_mapping__odoo_invoice_id
+msgid "Odoo Invoice ID"
+msgstr "معرف فاتورة أودو"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas
+msgid "Odoo Multi Accounting Solution"
+msgstr "حل Odoo للمحاسبة المتعددة"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.ui.menu,name:odoo_multi_accounting_solution.omas_parent_menu
+msgid "Odoo Multi-Accounting"
+msgstr "أودو للمحاسبة المتعددة"
+
+#. module: odoo_multi_accounting_solution
+#. odoo-javascript
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#: model:ir.actions.act_window,name:odoo_multi_accounting_solution.omas_action
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_tree
+#, python-format
+msgid "Odoo Multi-Accounting Solution"
+msgstr "حل Odoo للمحاسبة المتعددة"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_export_operation
+msgid "Odoo Multi-Accounting Solution Export Operation"
+msgstr "عملية تصدير حلول Odoo للمحاسبة المتعددة"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_import_operation
+msgid "Odoo Multi-Accounting Solution Import Operation"
+msgstr "عملية استيراد حلول Odoo للمحاسبة المتعددة"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_order_mapping__name
+msgid "Odoo Order"
+msgstr "طلبية أودو"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_order_mapping__odoo_order_id
+msgid "Odoo Order ID"
+msgstr "معرّف الطلب أودو"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_instance_order_state__odoo_order_state
+msgid "Odoo Order State"
+msgstr "حالة طلب أودو"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_mapping__odoo_payment_id
+msgid "Odoo Payment ID"
+msgstr "معرّف الدفع أودو"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_method_mapping__odoo_payment_method_id
+msgid "Odoo Payment Method ID"
+msgstr "معرّف طريقة الدفع أودو"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_term_mapping__odoo_payment_term_id
+msgid "Odoo Payment Term ID"
+msgstr "معرّف مصطلح الدفع أودو"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_product_mapping__name
+msgid "Odoo Product"
+msgstr "منتج أودو"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_product_mapping__odoo_product_id
+msgid "Odoo Product ID"
+msgstr "معرّف منتج أودو"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_purchase_order_mapping__name
+msgid "Odoo Purchase Order"
+msgstr "طلب الشراء من أودو"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_purchase_order_mapping__odoo_purchase_order_id
+msgid "Odoo Purchase Order ID"
+msgstr "معرّف طلب الشراء من أودو"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_shipping_mapping__odoo_shipping_id
+msgid "Odoo Shipping ID"
+msgstr "مُعرّف الشحن أودو"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_tax_mapping__name
+msgid "Odoo Tax"
+msgstr "ضرائب أودو"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_tax_mapping__odoo_tax_id
+msgid "Odoo Tax ID"
+msgstr "مُعرِّف ضرائب أودو"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_product_mapping__odoo_template_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_template_mapping__name
+msgid "Odoo Template"
+msgstr "قالب أودو"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_template_mapping__odoo_template_id
+msgid "Odoo Template ID"
+msgstr "معرف قالب أودو"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_mapping__name
+msgid "Odoo payment"
+msgstr "مدفوعات أودو"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_method_mapping__name
+msgid "Odoo payment Method"
+msgstr "طريقة الدفع أودو"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_term_mapping__name
+msgid "Odoo payment Term"
+msgstr "مصطلح الدفع أودو"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_search
+msgid "Omas Search"
+msgstr "OMAS بحث"
+
+#. module: odoo_multi_accounting_solution
+#. odoo-javascript
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#, python-format
+msgid "Only Mapped"
+msgstr "Mapped فقط"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_instance_order_state__odoo_set_invoice_state__open
+msgid "Open"
+msgstr "يفتح"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Open wizard to export record."
+msgstr "افتح المعالج لتصدير السجل."
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Open wizard to import record."
+msgstr "افتح المعالج لاستيراد السجل."
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_account_mapping__operation
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_base_mapping__operation
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_category_mapping__operation
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_customer_mapping__operation
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_export_operation__operation
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_import_operation__operation
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_invoice_mapping__operation
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_manual_export__operation
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_order_mapping__operation
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_mapping__operation
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_method_mapping__operation
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_term_mapping__operation
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_product_mapping__operation
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_purchase_order_mapping__operation
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_shipping_mapping__operation
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_tax_mapping__operation
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_template_mapping__operation
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Operation"
+msgstr "العملية"
+
+#. module: odoo_multi_accounting_solution
+#. odoo-javascript
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#, python-format
+msgid "Order"
+msgstr "الطلبات"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.ui.menu,name:odoo_multi_accounting_solution.omas_order_feed_menu
+msgid "Order Feeds"
+msgstr "تغذية الطلبات"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_order_mapping
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_purchase_order_mapping
+msgid "Order Mapping Model for Odoo Multi Accounting Solution"
+msgstr "نموذج رسم الخرائط ترتيب لحل Odoo للمحاسبة المتعددة"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.act_window,name:odoo_multi_accounting_solution.omas_order_mapping_action
+msgid "Order Mappings"
+msgstr "تعيينات الطلبات"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Order State Configuration"
+msgstr "تكوين حالة الطلبات"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Order State Mapping"
+msgstr "رسم خرائط حالة طلب"
+
+#. module: odoo_multi_accounting_solution
+#. odoo-javascript
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#, python-format
+msgid "Orders"
+msgstr "طلبات"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Organization"
+msgstr "التنظيم"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__organization_id
+msgid "Organization ID"
+msgstr "معرف المنظمة"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__page_limit
+msgid "Page Limit"
+msgstr "حد الصفحات"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_instance_order_state__odoo_set_invoice_state__paid
+msgid "Paid"
+msgstr "مدفوع"
+
+#. module: odoo_multi_accounting_solution
+#. odoo-javascript
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#, python-format
+msgid "Paid Invoices"
+msgstr "الفواتير المدفوعة"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.ui.menu,name:odoo_multi_accounting_solution.omas_payment_feed_menu
+msgid "Payment Feeds"
+msgstr "يغذي الدفع"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_payment_mapping
+msgid "Payment Mapping Model for Odoo Multi Accounting Solution"
+msgstr "نموذج رسم الخرائط الدفع لحل Odoo للمحاسبة المتعددة"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.ui.menu,name:odoo_multi_accounting_solution.omas_payment_mapping_menu
+msgid "Payment Mappings"
+msgstr "رسم الخرائط الدفع"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_payment_method_mapping_tree
+msgid "Payment Method Mapping"
+msgstr "طرق الدفع رسم الخرائط"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_payment_method_mapping
+msgid "Payment Method Mapping Model for Odoo Multi Accounting Solution"
+msgstr "نموذج رسم الخرائط طريقة الدفع لحل Odoo للمحاسبة المتعددة"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.act_window,name:odoo_multi_accounting_solution.omas_payment_method_mapping_action
+#: model:ir.ui.menu,name:odoo_multi_accounting_solution.omas_payment_method_mapping_menu
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_payment_method_mapping_view_search
+msgid "Payment Method Mappings"
+msgstr "طرق الدفع رسم الخرائط"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__journal_sequence_id
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Payment Method Sequence"
+msgstr "تسلسل طريقة الدفع"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_import_operation__object__payment_methods
+msgid "Payment Methods"
+msgstr "طرق الدفع"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_payment_term_mapping_tree
+msgid "Payment Term Mapping"
+msgstr "رسم خرائط مصطلح الدفع"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_payment_term_mapping
+msgid "Payment Term Mapping Model for Odoo Multi Accounting Solution"
+msgstr "نموذج رسم الخرائط مدة الدفع لحل Odoo للمحاسبة المتعددة"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.act_window,name:odoo_multi_accounting_solution.omas_payment_term_mapping_action
+#: model:ir.ui.menu,name:odoo_multi_accounting_solution.omas_payment_term_mapping_menu
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_payment_term_mapping_view_search
+msgid "Payment Term Mappings"
+msgstr "رسم الخرائط مصطلح الدفع"
+
+#. module: odoo_multi_accounting_solution
+#. odoo-javascript
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#, python-format
+msgid "Pending Orders"
+msgstr "الأوامر المعلقة"
+
+#. module: odoo_multi_accounting_solution
+#. odoo-javascript
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#, python-format
+msgid "Pie Chart"
+msgstr "مخطط دائري"
+
+#. module: odoo_multi_accounting_solution
+#. odoo-javascript
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#, python-format
+msgid "Product"
+msgstr "نتاج"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Product Default Category"
+msgstr "الفئة الافتراضية للمنتج"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.ui.menu,name:odoo_multi_accounting_solution.omas_product_feed_menu
+msgid "Product Feeds"
+msgstr "تغذية المنتجات"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_product_mapping
+msgid "Product Mapping Model for Odoo Multi Accounting Solution"
+msgstr "نموذج رسم الخرائط المنتج لحل Odoo للمحاسبة المتعددة"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.act_window,name:odoo_multi_accounting_solution.omas_product_mapping_action
+#: model:ir.ui.menu,name:odoo_multi_accounting_solution.omas_product_mapping_menu
+msgid "Product Mappings"
+msgstr "رسم الخرائط المنتج"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__product_sequence_id
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Product Sequence"
+msgstr "تسلسل المنتج"
+
+#. module: odoo_multi_accounting_solution
+#. odoo-javascript
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_export_operation__object__templates
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_import_operation__object__templates
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_manual_export__object__templates
+#, python-format
+msgid "Products"
+msgstr "منتجات"
+
+#. module: odoo_multi_accounting_solution
+#. odoo-javascript
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#, python-format
+msgid "Purchase"
+msgstr "شىء مشترى"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.ui.menu,name:odoo_multi_accounting_solution.menu_vendor_data_mappings
+msgid "Purchase Mappings"
+msgstr "رسم الخرائط الشراء"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_export_operation__object__purchase_orders
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_import_operation__object__purchase_orders
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_manual_export__object__purchase_orders
+#: model:ir.ui.menu,name:odoo_multi_accounting_solution.omas_purchase_order_mapping_menu
+msgid "Purchase Order"
+msgstr "أمر شراء"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.ui.menu,name:odoo_multi_accounting_solution.omas_purchase_order_feed_menu
+msgid "Purchase Order Feeds"
+msgstr "تغذية أوامر الشراء"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.act_window,name:odoo_multi_accounting_solution.omas_purchase_order_mapping_action
+msgid "Purchase Order Mappings"
+msgstr "رسم الخرائط أوامر الشراء"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__sync_purchase_order_name
+msgid "Purchase Order Name"
+msgstr "اسم أمر الشراء"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Purchase Order Number"
+msgstr "رقم طلب الشراء"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_instance_order_state__odoo_order_state__draft
+msgid "Quotation"
+msgstr "عروض الأسعار"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__redirect_uri
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Redirect URI"
+msgstr "إعادة توجيه المعرف الضوئي (URI)"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,help:odoo_multi_accounting_solution.field_omas__redirect_uri
+msgid "Redirect Url eg: https://your-odoo-url/omas"
+msgstr "إعادة توجيه عنوان URL على سبيل المثال: https://your-odoo-url/omas"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__refresh_token
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Refresh Token"
+msgstr "رمز التحديث المميز"
+
+#. module: odoo_multi_accounting_solution
+#. odoo-javascript
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#, python-format
+msgid "Refresh the Dashboard"
+msgstr "قم إنعاش  لوحة القيادة"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_export_operation__credit_refund_selection__in_refund
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_import_operation__credit_refund_selection__in_refund
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_invoice_feed__feed_move_type__in_refund
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_invoice_mapping__mapping_move_type__in_refund
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_manual_export__credit_refund_selection__in_refund
+msgid "Refund"
+msgstr "إعادة مال"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.ui.menu,name:odoo_multi_accounting_solution.menu_action_move_in_refund
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_invoice_feed_view_search
+msgid "Refunds"
+msgstr "إعادة مال"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_account_mapping__remote_account_code
+msgid "Remote Account Code"
+msgstr "رمز الحساب البعيد"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_account_feed__remote_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_account_mapping__remote_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_base_mapping__remote_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_category_mapping__remote_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_customer_feed__remote_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_customer_mapping__remote_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_feed__remote_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_instance_organization__remote_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_invoice_feed__remote_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_invoice_mapping__remote_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_order_feed__remote_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_order_mapping__remote_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_feed__remote_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_mapping__remote_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_method_mapping__remote_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_term_mapping__remote_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_product_feed__remote_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_product_mapping__remote_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_purchase_order_feed__remote_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_purchase_order_mapping__remote_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_shipping_mapping__remote_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_tax_feed__remote_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_tax_mapping__remote_id
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_template_mapping__remote_id
+msgid "Remote ID"
+msgstr "معرف بعيد"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.constraint,message:odoo_multi_accounting_solution.constraint_omas_account_mapping_instance_remote_id_uniq
+#: model:ir.model.constraint,message:odoo_multi_accounting_solution.constraint_omas_base_mapping_instance_remote_id_uniq
+#: model:ir.model.constraint,message:odoo_multi_accounting_solution.constraint_omas_category_mapping_instance_remote_id_uniq
+#: model:ir.model.constraint,message:odoo_multi_accounting_solution.constraint_omas_customer_mapping_instance_remote_id_uniq
+#: model:ir.model.constraint,message:odoo_multi_accounting_solution.constraint_omas_invoice_mapping_instance_remote_id_uniq
+#: model:ir.model.constraint,message:odoo_multi_accounting_solution.constraint_omas_order_mapping_instance_remote_id_uniq
+#: model:ir.model.constraint,message:odoo_multi_accounting_solution.constraint_omas_payment_mapping_instance_remote_id_uniq
+#: model:ir.model.constraint,message:odoo_multi_accounting_solution.constraint_omas_payment_method_mapping_instance_remote_id_uniq
+#: model:ir.model.constraint,message:odoo_multi_accounting_solution.constraint_omas_payment_term_mapping_instance_remote_id_uniq
+#: model:ir.model.constraint,message:odoo_multi_accounting_solution.constraint_omas_product_mapping_instance_remote_id_uniq
+#: model:ir.model.constraint,message:odoo_multi_accounting_solution.constraint_omas_purchase_order_mapping_instance_remote_id_uniq
+#: model:ir.model.constraint,message:odoo_multi_accounting_solution.constraint_omas_shipping_mapping_instance_remote_id_uniq
+#: model:ir.model.constraint,message:odoo_multi_accounting_solution.constraint_omas_tax_mapping_instance_remote_id_uniq
+#: model:ir.model.constraint,message:odoo_multi_accounting_solution.constraint_omas_template_mapping_instance_remote_id_uniq
+msgid "Remote ID must be unique for Instance mapping!"
+msgstr "يجب أن يكون المعرف البعيد فريدًا لتعيين المثيل!"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_method_mapping__remote_name
+msgid "Remote Journal Name"
+msgstr "اسم المجلة البعيد"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_product_mapping__remote_template_id
+msgid "Remote Template ID"
+msgstr "معرف القالب البعيد"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسئول"
+
+#. module: odoo_multi_accounting_solution
+#. odoo-javascript
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#, python-format
+msgid "Revenue"
+msgstr "الإيرادات"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل القصيرة"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.ui.menu,name:odoo_multi_accounting_solution.menu_customer_data_mappings
+msgid "Sale Mappings"
+msgstr "رسم الخرائط البيع"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.ui.menu,name:odoo_multi_accounting_solution.omas_order_mapping_menu
+msgid "Sale Order"
+msgstr "أمر البيع"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__sync_sale_order_name
+msgid "Sale Order Name"
+msgstr "اسم أمر البيع"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Sale Order Number"
+msgstr "رقم أمر البيع"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_export_operation__object__orders
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_import_operation__object__orders
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_manual_export__object__orders
+msgid "Sale Orders"
+msgstr "طلبات البيع"
+
+#. module: odoo_multi_accounting_solution
+#. odoo-javascript
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#, python-format
+msgid "Sales"
+msgstr "مبيعات"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_instance_order_state__odoo_order_state__sale
+msgid "Sales Order"
+msgstr "طلبات البيع"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__team_id
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Sales Team"
+msgstr "فريق المبيعات"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__user_id
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Salesperson"
+msgstr "مندوب المبيعات"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Select"
+msgstr "انتقى"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,help:odoo_multi_accounting_solution.field_omas__pricelist_id
+msgid "Select the same currency of pricelist used  over Accounting Software."
+msgstr "حدد نفس عملة قائمة الأسعار المستخدمة في برامج المحاسبة."
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Select this field to Enable Bills Import Cron"
+msgstr "حدد هذا الحقل لتمكين استيراد الفواتير Cron"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Select this field to Enable Customer Credit Notes Cron"
+msgstr "حدد هذا الحقل لتمكين Cron لملاحظات ائتمان العميل"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Select this field to Enable Customer Cron"
+msgstr "حدد هذا الحقل لتمكين Customer Cron"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Select this field to Enable Customer Invoice Cron"
+msgstr "حدد هذا الحقل لتمكين Cron فاتورة العميل"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Select this field to Enable Order Cron"
+msgstr "حدد هذا الحقل لتمكين Order Cron"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Select this field to Enable Payment Cron"
+msgstr "حدد هذا الحقل لتمكين Payment Cron"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Select this field to Enable Product Cron"
+msgstr "حدد هذا الحقل لتمكين Product Cron"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Select this field to Enable Purchase Order Cron"
+msgstr "حدد هذا الحقل لتمكين أمر الشراء Cron"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Select this field to Enable Vendor Refunds Cron"
+msgstr "حدد هذا الحقل لتمكين عمليات استرداد الأموال للموردين"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Sequence Configuration"
+msgstr "تكوين التسلسل"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__set_account_sequence
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Set Account Sequence"
+msgstr "تعيين تسلسل الحسابات"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_instance_order_state__odoo_set_invoice_state
+msgid "Set Invoice State"
+msgstr "تعيين حالة الفاتورة"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__set_journal_sequence
+msgid "Set Journal Sequence"
+msgstr "تعيين تسلسل دفتر اليوميات"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Set Payment Method Sequence"
+msgstr "تعيين تسلسل طريقة الدفع"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__set_product_sequence
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Set Product Sequence"
+msgstr "تعيين تسلسل المنتج"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_instance_order_state__odoo_order_state__shipped
+msgid "Shipped"
+msgstr "شحنها"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_shipping_mapping_tree
+msgid "Shipping Mapping"
+msgstr "رسم الخرائط الشحن"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_shipping_mapping
+msgid "Shipping Mapping Model for Odoo Multi Accounting Solution"
+msgstr "نموذج رسم الخرائط الشحن لحل Odoo للمحاسبة المتعددة"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.act_window,name:odoo_multi_accounting_solution.omas_shipping_mapping_action
+#: model:ir.ui.menu,name:odoo_multi_accounting_solution.omas_shipping_menu
+msgid "Shipping Mappings"
+msgstr "رسم الخرائط الشحن"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_account_feed__state
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_customer_feed__state
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_feed__state
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_invoice_feed__state
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_order_feed__state
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_feed__state
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_product_feed__state
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_purchase_order_feed__state
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_tax_feed__state
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_account_feed_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_customer_feed_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_invoice_feed_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_order_feed_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_payment_feed_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_product_feed_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_purchase_order_feed_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_tax_feed_view_search
+msgid "State"
+msgstr "ولاية"
+
+#. module: odoo_multi_accounting_solution
+#. odoo-javascript
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#, python-format
+msgid "Statistics"
+msgstr "إحصائيات"
+
+#. module: odoo_multi_accounting_solution
+#. odoo-javascript
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#, python-format
+msgid "Status"
+msgstr "مكانة"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,help:odoo_multi_accounting_solution.field_omas__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الحالة بناءً على الأنشطة\n"
+"متأخر: لقد مر تاريخ الاستحقاق بالفعل\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط لها: الأنشطة المستقبلية."
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__location_id
+msgid "Stock Location"
+msgstr "موقع المخزون"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,help:odoo_multi_accounting_solution.field_omas__location_id
+msgid "Stock Location used for imported product."
+msgstr "موقع المخزون المستخدم للمنتج المستورد."
+
+#. module: odoo_multi_accounting_solution
+#. odoo-javascript
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#, python-format
+msgid ""
+"Streamline your Accounting Platform connection with a unified \n"
+"\t\t\t\t\t\t\t\tOdoo solution! Simplify data management by embracing Odoo \n"
+"\t\t\t\t\t\t\t\tMulti-Accounting Solution, which efficiently handles data \n"
+"\t\t\t\t\t\t\t\tfrom multiple Accounting Platforms within a single Odoo instance."
+msgstr ""
+"تبسيط اتصال النظام الأساسي للمحاسبة باستخدام \n"
+"\t\t\t\t\t\t\t\tحل Odoo! تبسيط إدارة البيانات من خلال استخدام Odoo \n"
+"\t\t\t\t\t\t\t\tحل المحاسبة المتعددة، الذي يعالج البيانات بكفاءة \n"
+"\t\t\t\t\t\t\t\tمن منصات محاسبة متعددة ضمن مثيل Odoo واحد."
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid ""
+"Sync Purchase Order Number(sequence) between Accounting Software and Odoo "
+"Purchase Order sequence"
+msgstr ""
+"مزامنة رقم طلب الشراء (التسلسل) بين برنامج المحاسبة وOdoo"
+"تسلسل أمر الشراء"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid ""
+"Sync Sale Order Number(sequence) between Accounting Software and Odoo Sale "
+"Order sequence."
+msgstr ""
+"مزامنة رقم أمر البيع (التسلسل) بين برنامج المحاسبة وبيع Odoo"
+"تسلسل الطلب."
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_manual_export_operation_view_form
+msgid "Synchronize"
+msgstr "تزامن"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.ui.menu,name:odoo_multi_accounting_solution.omas_tax_feed_menu
+msgid "Tax Feeds"
+msgstr "التغذية الضريبية"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_tax_mapping_tree
+msgid "Tax Mapping"
+msgstr "رسم الخرائط الضريبية"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_tax_mapping
+msgid "Tax Mapping Model for Odoo Multi Accounting Solution"
+msgstr "نموذج رسم الخرائط الضريبية لحل Odoo للمحاسبة المتعددة"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.act_window,name:odoo_multi_accounting_solution.omas_tax_mapping_action
+#: model:ir.ui.menu,name:odoo_multi_accounting_solution.omas_tax_menu
+msgid "Tax Mappings"
+msgstr "رسم الخرائط الضريبية"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_tax_mapping_form
+msgid "Tax Name"
+msgstr "الاسم الضريبي"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,help:odoo_multi_accounting_solution.field_omas_tax_mapping__tax_amount
+msgid "Tax amount in percent (%)"
+msgstr "مبلغ الضريبة بالنسبة المئوية (٪)"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_import_operation__object__taxes
+msgid "Taxes"
+msgstr "الضرائب"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model,name:odoo_multi_accounting_solution.model_omas_template_mapping
+msgid "Template Mapping Model for Odoo Multi Accounting Solution"
+msgstr "نموذج رسم الخرائط القالب لحلول أودو للمحاسبة المتعددة"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.act_window,name:odoo_multi_accounting_solution.omas_template_mapping_action
+#: model:ir.ui.menu,name:odoo_multi_accounting_solution.omas_template_mapping_menu
+msgid "Template Mappings"
+msgstr "رسم الخرائط القالب"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Test Connection"
+msgstr "اتصال الاختبار"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,help:odoo_multi_accounting_solution.field_omas_instance_order_state__odoo_set_invoice_state
+msgid "The field is used to retrieve orders that are in a specific state."
+msgstr "يتم استخدام الحقل لاسترداد الطلبات الموجودة في حالة معينة."
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.constraint,message:odoo_multi_accounting_solution.constraint_omas_instance_order_state_value_instance_state_uniq
+msgid "The instance order state already exists !"
+msgstr "حالة ترتيب المثيل موجودة بالفعل!"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,help:odoo_multi_accounting_solution.field_omas__language_id
+msgid "The language used over the Accounting Software."
+msgstr "اللغة المستخدمة في البرمجيات المحاسبة."
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,help:odoo_multi_accounting_solution.field_omas_instance_organization__connection_id
+msgid ""
+"This Field Store The Remote Connection Id Which Will Help While "
+"Disconnecting The Individual Connection"
+msgstr ""
+"يخزن هذا الحقل معرف الاتصال عن بعد والذي سيساعد أثناء ذلك"
+"قطع الاتصال الصلة الفردية"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.constraint,message:odoo_multi_accounting_solution.constraint_omas_instance_organization_value_instance_state_uniq
+msgid "This organization already exists !"
+msgstr "هذه المنظمة موجودة بالفعل!"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Token Details"
+msgstr "تفاصيل الرمز المميز"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_customer_mapping__type
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_invoice_feed__feed_move_type
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_invoice_mapping__mapping_move_type
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_customer_mapping_view_search
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_invoice_feed_view_search
+msgid "Type"
+msgstr "نوع"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,help:odoo_multi_accounting_solution.field_omas__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع نشاط الاستثناء المسجل."
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__unavailable_features
+msgid "Unavailable Features Note"
+msgstr "غير متاح الميزات ملاحظة"
+
+#. module: odoo_multi_accounting_solution
+#. odoo-javascript
+#: code:addons/odoo_multi_accounting_solution/static/src/xml/omas_dashboard.xml:0
+#, python-format
+msgid "Unpaid Invoices"
+msgstr "الفواتير غير المدفوعة"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_export_operation__operation__update
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_import_operation__operation__update
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_manual_export__operation__update
+msgid "Update"
+msgstr "جعله عصريا يطلع"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_account_mapping__need_sync
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_base_mapping__need_sync
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_category_mapping__need_sync
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_customer_mapping__need_sync
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_invoice_mapping__need_sync
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_order_mapping__need_sync
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_mapping__need_sync
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_method_mapping__need_sync
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_payment_term_mapping__need_sync
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_product_mapping__need_sync
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_purchase_order_mapping__need_sync
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_shipping_mapping__need_sync
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_tax_mapping__need_sync
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas_template_mapping__need_sync
+msgid "Update Required"
+msgstr "مطلوب التحديث"
+
+#. module: odoo_multi_accounting_solution
+#: model:res.groups,name:odoo_multi_accounting_solution.group_omas_user
+msgid "User"
+msgstr "مستخدم"
+
+#. module: odoo_multi_accounting_solution
+#: model:res.groups,comment:odoo_multi_accounting_solution.group_omas_user
+msgid "User will have an read access to the Odoo Multi-Accounting Solution."
+msgstr "سيكون لدى المستخدم حق الوصول للقراءة إلى حل Odoo للمحاسبة المتعددة."
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_customer_mapping__customer_type__vendor
+msgid "Vendor"
+msgstr "بائع"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_invoice_feed__feed_move_type__in_invoice
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_invoice_mapping__mapping_move_type__in_invoice
+msgid "Vendor Bill"
+msgstr "فواتير البائع"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_export_operation__invoice_bill_selection__in_invoice
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_import_operation__invoice_bill_selection__in_invoice
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_manual_export__invoice_bill_selection__in_invoice
+#: model:ir.ui.menu,name:odoo_multi_accounting_solution.menu_action_move_in_invoice
+msgid "Vendor Bills"
+msgstr "مشروع القانون البائعين"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.act_window,name:odoo_multi_accounting_solution.action_account_move_in_invoice
+msgid "Vendor Bills Mapping"
+msgstr "رسم خرائط فواتير البائعين"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.actions.act_window,help:odoo_multi_accounting_solution.action_account_move_in_invoice
+msgid "Vendor Bills will be visible here"
+msgstr "ستكون فواتير البائعين مرئية هنا"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.actions.act_window,help:odoo_multi_accounting_solution.action_account_move_in_refund
+msgid "Vendor Credit Notes will be visible here"
+msgstr "ستكون إشعارات ائتمان البائع مرئية هنا"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.act_window,name:odoo_multi_accounting_solution.action_account_move_in_refund
+msgid "Vendor Refunds Mapping"
+msgstr "رسم الخرائط استرداد أموال البائعين"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_customer_mapping_view_search
+msgid "Vendors"
+msgstr "بائع"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__warehouse_id
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "Warehouse"
+msgstr "خزن بمستودع"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,help:odoo_multi_accounting_solution.field_omas__warehouse_id
+msgid "Warehouse used for imported product."
+msgstr "المستودع المستخدم للمنتج المستورد."
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,field_description:odoo_multi_accounting_solution.field_omas__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع الإلكتروني"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields,help:odoo_multi_accounting_solution.field_omas__website_message_ids
+msgid "Website communication history"
+msgstr "تاريخ اتصالات الموقع الإلكتروني"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.actions.act_window,help:odoo_multi_accounting_solution.action_account_move_out_refund
+msgid ""
+"When the Customer Credit Notes will be imported, you can visit here to check the mapping\n"
+"\t\t\t\tof the Customer Credit Notes."
+msgstr ""
+"عندما سيتم استيراد إشعارات ائتمان العميل، يمكنك زيارة هنا للتحقق من رسم الخرائط\n"
+"\t\t\t\tالإشعارات الدائنة للعميل."
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.actions.act_window,help:odoo_multi_accounting_solution.action_account_move_in_refund
+msgid ""
+"When the Vendor Credit Notes will be imported, you can visit here to check the mapping\n"
+"\t\t\t\tof the Vendor Credit Notes."
+msgstr ""
+"عندما سيتم استيراد إشعارات ائتمان المورد، يمكنك زيارة هنا للتحقق من رسم الخرائط\n"
+"\t\t\t\tالإشعارات الدائنة للمورد."
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.actions.act_window,help:odoo_multi_accounting_solution.action_account_move_in_invoice
+msgid ""
+"When the vendor bills will be imported, you can visit here to check the mapping\n"
+"\t\t\t\tof the vendor bills."
+msgstr ""
+"عندما سيتم استيراد فواتير الموردين، يمكنك زيارة هنا للتحقق من التعيين\n"
+"\t\t\t\tمن فواتير المورد."
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_category_mapping_tree
+msgid "category Mapping"
+msgstr "رسم الخرائط الفئة"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_category_mapping_view_search
+msgid "category Mappings"
+msgstr "رسم الخرائط الفئة"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_customer_mapping_tree
+msgid "customer Mapping"
+msgstr "رسم خرائط العملاء"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_customer_mapping_view_search
+msgid "customer Mappings"
+msgstr "رسم خرائط العملاء"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "e.g. odoo multi-accounting solution"
+msgstr "على سبيل المثال حل odoo للمحاسبة المتعددة"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_account_mapping__operation__export
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_base_mapping__operation__export
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_category_mapping__operation__export
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_customer_mapping__operation__export
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_invoice_mapping__operation__export
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_order_mapping__operation__export
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_payment_mapping__operation__export
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_payment_method_mapping__operation__export
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_payment_term_mapping__operation__export
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_product_mapping__operation__export
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_purchase_order_mapping__operation__export
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_shipping_mapping__operation__export
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_tax_mapping__operation__export
+#: model:ir.model.fields.selection,name:odoo_multi_accounting_solution.selection__omas_template_mapping__operation__export
+msgid "export"
+msgstr "يصدّر"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_view_form
+msgid "https://{redirect_uri}/omas"
+msgstr "https://{redirect_uri}/omas"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_invoice_mapping_tree
+msgid "invoice Mapping"
+msgstr "رسم خرائط الفاتورة"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_invoice_mapping_view_search
+msgid "invoice Mappings"
+msgstr "رسم خرائط الفاتورة"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.client,name:odoo_multi_accounting_solution.omas_dashboard_action
+msgid "omas Online Dashboard"
+msgstr "لوحة معلومات omas عبر الإنترنت"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_order_mapping_tree
+msgid "order Mapping"
+msgstr "رسم الخرائط الطلبات"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_order_mapping_view_search
+msgid "order Mappings"
+msgstr "رسم الخرائط الطلبات"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_payment_mapping_tree
+msgid "payment Mapping"
+msgstr "رسم خرائط الدفع"
+
+#. module: odoo_multi_accounting_solution
+#: model:ir.actions.act_window,name:odoo_multi_accounting_solution.omas_payment_mapping_action
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_payment_mapping_view_search
+msgid "payment Mappings"
+msgstr "رسم خرائط الدفع"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_product_mapping_tree
+msgid "product Mapping"
+msgstr "رسم خرائط المنتج"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_product_mapping_view_search
+msgid "product Mappings"
+msgstr "رسم خرائط المنتج"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_purchase_order_mapping_tree
+msgid "purchase order Mapping"
+msgstr "رسم خرائط أمر الشراء"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_purchase_order_mapping_view_search
+msgid "purchase order Mappings"
+msgstr "رسم خرائط أمر الشراء"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_shipping_mapping_view_search
+msgid "shipping Mappings"
+msgstr "رسم الخرائط الشحن"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_tax_mapping_view_search
+msgid "tax Mappings"
+msgstr "رسم الخرائط الضريبية"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_template_mapping_tree
+msgid "template Mapping"
+msgstr "رسم الخرائط القالب"
+
+#. module: odoo_multi_accounting_solution
+#: model_terms:ir.ui.view,arch_db:odoo_multi_accounting_solution.omas_template_mapping_view_search
+msgid "template Mappings"
+msgstr "رسم الخرائط القالب"

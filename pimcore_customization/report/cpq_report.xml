@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="cpq_report">
+        <div class="container bg-white estimation-space">
+            <div class="row ">
+                <div class="col-12 estimation-pricelist-header" style="padding-top:20px;">
+                    <h2>Currency:
+                        <a class="o_action estimation-pricelist-header" data-model="res.currency" href="#" t-att-data-res-id="currency.id">
+                            <t t-esc="currency.name"/>
+                        </a>
+                    </h2>
+                </div>
+            </div>
+            <div class="row estimation-pricelist-table">
+                <div class="col-12">
+                    <table class="table table-sm">
+                        <thead>
+                            <tr>
+                                <th>Select</th>
+                                <th>Product Template</th>
+                                <th>Printing Products</th>
+                                <th>Delivery Products</th>
+                                <th>Total</th>
+                                <th></th>
+                            </tr>
+                            <tbody>
+                                <t t-as="rec" t-foreach="products">
+                                    <tr t-att-data-row-id="rec.get('id')" t-att-value="rec.get('id')">
+                                        <td>
+                                            <input t-on-change="onChangeCheckbox" class="estimation-checkbox" name="estimation_id" t-att-id="rec.get('id')" t-att-value="rec.get('id')" type="checkbox"/>
+                                        </td>
+                                        <td class="product-template" t-att-data-product-template-id="rec.get('id')">
+                                            <t t-esc="rec.get('product_template_id').name"/>
+                                            <t t-if="rec.get('variant_ids')">
+                                                [<t t-esc="', '.join([v['display_name'] for v in rec.get('variant_ids', [])])"/>]
+                                            </t>
+                                        </td>
+
+                                        <td class="font-weight-bold">
+                                            <t t-if="rec.get('printing_product_ids')">
+                                                <t t-esc="', '.join([p['name'] for p in rec.get('printing_product_ids', [])])"/>
+                                            </t>
+                                        </td>
+
+
+                                        <td class="font-weight-bold">
+                                            <t t-if="rec.get('delivery_product_ids')">
+                                                <t t-esc="', '.join([d['name'] for d in rec.get('delivery_product_ids', [])])"/>
+                                            </t>
+                                        </td>
+
+                                        <td class="font-weight-bold">
+                                            <t t-esc="rec.get('total')" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: currency}"/>
+                                        </td>
+                                        <td>
+                                            <a class="edit-record">
+                                                <span class="icons">
+                                                    <i class="fa fa-external-link"></i>
+                                                </span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a class="view-record" t-att-data-product-template-id="rec.get('id')">
+                                                <span class="icons">
+                                                    <i class="fa fa-eye"></i>
+                                                </span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </template>
+</odoo>

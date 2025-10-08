@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="preseli_vendor_job_queue" model="vendor.queue.job">
+            <field name="name">pim_preseli</field>
+        </record>
+
+        <record id="preseli_vendor_configuration" model="pimore.vender.config">
+            <field name="name">pim_preseli</field>
+            <field name="endpoint_url">https://pimcore.printxpand.net/pimcore-graphql-webservices/Preseli</field>
+            <field name="general_api_key">393c239476afaf3d43cb8302bf0beb28</field>
+            <field name="api_key">fd3642b7cf0cee1437859f24dfe46510</field>
+            <field name="query_text">  query {
+  getPreseliCategoriesListing(defaultLanguage: "en"){
+    edges {
+      node {
+         id
+         code
+	label
+	category_id
+      }
+    }
+    totalCount
+  }
+}  </field>
+        <field name="product_query_text">query GetPreseliProductsListing {
+    getPreseliProductsListing(
+        first: 10, 
+        defaultLanguage: "en"
+        ) {
+        totalCount
+        edges {
+            node {
+                id
+                psli_ProductName
+                psli_ProductCode
+                psli_Description
+                psli_Colours
+                psli_Material
+                psli_Size
+                psli_Branding
+                psli_Height
+                psli_Width
+                psli_DimensionUnit
+                psli_Weight
+                psli_WeightUnit
+                psli_previewImages
+                psli_Images
+                psli_Artwork {
+                    path
+                }
+                psli_DataSheet{
+                    path
+                }
+                psli_LeadTime
+                psli_EndUserWebsite{
+                    path
+                }
+                psli_Prices{
+                    ... on fieldcollection_PreseliPrices{
+                        psli_Name
+                        psli_Quantity
+                        psli_PriceDetails{
+                            Type
+                            Description
+                            Value
+                            Unit
+                        }
+                    }
+                }
+                psli_catalogueId{
+                    ... on object_PreseliCategories{
+                    id
+                    }
+                }
+            }
+        }
+    }
+}</field>
+            <field name="vendor_queue_job_id" ref="preseli_vendor_job_queue"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    	<record id="view_sale_order_line_custom_tree" model="ir.ui.view">
+            <field name="name">sale.order.line.custom.tree</field>
+            <field name="model">sale.order.line</field>
+            <field name="arch" type="xml">
+                <list string="Sale Order Lines">
+                    <field name="cost_order_name" string="Description"/>
+                    <field name="price_subtotal" string="Price" />
+                    <field name="cost_price" string="Price"/>
+                    <field name="margin"/>
+                    <field name="order_amount_total" invisible="[('order_id', '=', False)]" />
+                </list>
+            </field>
+        </record>
+
+         <record id="view_order_line_search" model="ir.ui.view">
+            <field name="name">sale.order.line.search</field>
+            <field name="model">sale.order.line</field>
+            <field name="arch" type="xml">
+                <search>
+                </search>
+            </field>
+        </record>
+
+    </data>
+</odoo>

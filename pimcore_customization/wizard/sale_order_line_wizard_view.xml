@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="sale_line_properties_wiz_form_view">
+        <field name="name">sale.line.properties.wiz.form</field>
+        <field name="model">sale.line.properties.wiz</field>
+        <field name="arch" type="xml">
+            <form string="Sale Line Properties Wizard">
+                <sheet>
+                    <group>
+                        <field name="sale_order_id" invisible="1"/>
+                        <field name="step" invisible="1"/>
+                        <field name="product_template_id" invisible="1"/>
+                    </group>
+                    <group string="Printing Products" invisible = "step != 'service'">
+                        <field name="service_product_ids" domain="[('id', 'in', context.get('related_printing_product_ids', []))]">
+                            <list editable="bottom" create="false" edit="true">
+                                <field name="name"/>
+                                <field name="default_code"/>
+                                <field name="display_name_with_variant"/>
+                                <field name="lst_price"/>
+                                <field name="printing_thumbnail_upload"  options="{'size': [30, 30]}"  widget="image" readonly="1" column_invisible="1"/>
+                                <field name="printing_thumbnail"  filename="printing_thumbnail_name" column_invisible="1"/>
+                                <field name="printing_thumbnail_name" column_invisible="1"/>
+                            </list>
+                        </field>
+                    </group>
+                    <group string="Delivery Products" invisible = "step in  ['service','extra_charges']">
+                        <field name="delivery_product_ids" domain="[('id', 'in', context.get('related_delivery_product_ids', []))]" >
+                            <list editable="bottom" create="false" edit="true">
+                                <field name="name"/>
+                                <field name="default_code"/>
+                                <field name="lst_price"/>
+                            </list>
+                        </field>
+                    </group>
+                    <!-- <group string="Extra Charges Products" invisible = "step != 'extra_charges'">
+                        <field name="extra_charge_product_ids">
+                            <list editable="bottom" create="false" edit="true">
+                                <field name="name"/>
+                                <field name="default_code"/>
+                                <field name="lst_price"/>
+                            </list>
+                        </field>
+                    </group> -->
+
+                </sheet>
+                <footer>
+                    <button string="Next" type="object" name="action_next_step" class="btn-primary" invisible = "step not in  ['service','delivery']"/>
+                    <button string="Confirm" type="object" name="select_template_properties" class="btn-primary" invisible = "step != 'extra_charges'"/>
+                    <button string="Discard" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_open_sale_line_properties_wiz">
+        <field name="name">Sale Line Properties Wizard</field>
+        <field name="res_model">sale.line.properties.wiz</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="sale_line_properties_wiz_form_view"/>
+        <field name="target">new</field>
+    </record>
+</odoo>
